@@ -1,0 +1,359 @@
+.ate-that-page {
+  --eat-green: #21c76f;
+  --eat-teal: #0fc9bc;
+  --eat-yellow: #f3c84b;
+  --eat-ink: #070b10;
+  --eat-muted: #596673;
+  --eat-soft: #f5f7f2;
+  background: #fbfcf9;
+}
+
+.ate-that-page .site-header {
+  background: rgba(251, 252, 249, 0.84);
+}
+
+.app-background {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 13% 10%, rgba(33, 199, 111, 0.13), transparent 31%),
+    radial-gradient(circle at 88% 18%, rgba(243, 200, 75, 0.16), transparent 28%),
+    linear-gradient(180deg, #fbfcf9 0%, #f0f5f2 54%, #fbfcf9 100%);
+}
+
+.app-nav-links {
+  margin-left: auto;
+}
+
+.app-hero {
+  position: relative;
+  min-height: 82vh;
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  background: #07100b;
+  color: #fff;
+}
+
+.app-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(5, 8, 7, 0.92) 0%, rgba(5, 8, 7, 0.75) 43%, rgba(5, 8, 7, 0.22) 100%),
+    linear-gradient(0deg, rgba(5, 8, 7, 0.78), transparent 45%);
+}
+
+.app-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("assets/dynamic-island-listening.jpg");
+  background-size: cover;
+  background-position: 68% 15%;
+  filter: saturate(1.05);
+}
+
+.app-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 9.5rem 0 5rem;
+  max-width: min(760px, 92vw);
+  margin-left: max(4vw, calc((100vw - 1120px) / 2));
+}
+
+.app-icon {
+  width: 74px;
+  height: 74px;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+  margin-bottom: 1.2rem;
+}
+
+.app-hero h1 {
+  color: #fff;
+  font-size: clamp(3.2rem, 11vw, 7.8rem);
+  line-height: 0.92;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0;
+}
+
+.app-hero .lead,
+.app-hero p {
+  color: rgba(255, 255, 255, 0.83);
+}
+
+.app-hero .eyebrow {
+  color: var(--eat-yellow);
+}
+
+.app-primary-action {
+  background: linear-gradient(135deg, var(--eat-green), #13a75b);
+}
+
+.app-secondary-action {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.app-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.app-hero-meta span {
+  color: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 0.42rem 0.78rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.app-strip {
+  background: #ffffff;
+  border-bottom: 1px solid #e1e7e3;
+}
+
+.app-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: #e1e7e3;
+}
+
+.app-strip-grid p {
+  margin: 0;
+  background: #fff;
+  padding: 1.25rem 1rem;
+}
+
+.app-strip-grid strong,
+.app-strip-grid span {
+  display: block;
+}
+
+.app-strip-grid strong {
+  color: var(--eat-ink);
+  font-family: "Sora", sans-serif;
+  font-size: 0.98rem;
+}
+
+.app-strip-grid span {
+  color: var(--eat-muted);
+  font-size: 0.84rem;
+  margin-top: 0.25rem;
+}
+
+.ate-that-page .eyebrow {
+  color: #12814d;
+}
+
+.app-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.app-feature-card {
+  background: #fff;
+  border: 1px solid #dfe8e1;
+  border-radius: 8px;
+  padding: 1.35rem;
+  box-shadow: 0 14px 42px rgba(30, 68, 46, 0.08);
+}
+
+.feature-number {
+  display: inline-flex;
+  color: #12814d;
+  font-weight: 800;
+  font-size: 0.78rem;
+  margin-bottom: 0.9rem;
+}
+
+.app-showcase {
+  background: #101512;
+  color: #fff;
+  overflow: hidden;
+}
+
+.app-showcase p,
+.app-showcase .lead {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.showcase-grid,
+.app-detail-grid,
+.privacy-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.phone-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.phone-shot,
+.detail-image,
+.privacy-image {
+  margin: 0;
+}
+
+.phone-shot img,
+.detail-image img,
+.privacy-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
+}
+
+.phone-shot-main {
+  margin-top: 1.5rem;
+}
+
+.phone-shot-offset {
+  margin-top: 5rem;
+}
+
+.app-detail-section {
+  padding-top: 6.5rem;
+}
+
+.detail-image img,
+.privacy-image img {
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.app-check-list {
+  margin: 1.2rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.app-check-list li {
+  position: relative;
+  padding-left: 1.7rem;
+  color: var(--eat-muted);
+}
+
+.app-check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.58rem;
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--eat-green), var(--eat-teal));
+}
+
+.app-privacy {
+  background: linear-gradient(180deg, #f7faf5 0%, #eef5ee 100%);
+  border-top: 1px solid #dfe8e1;
+  border-bottom: 1px solid #dfe8e1;
+}
+
+.privacy-grid {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.app-cta {
+  background: #101512;
+  color: #fff;
+  border-radius: 8px;
+  padding: clamp(1.4rem, 4vw, 2.4rem);
+  box-shadow: 0 28px 72px rgba(18, 42, 28, 0.18);
+}
+
+.app-cta p {
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 68ch;
+}
+
+.app-cta .eyebrow {
+  color: var(--eat-yellow);
+}
+
+@media (max-width: 980px) {
+  .app-strip-grid,
+  .app-feature-grid,
+  .showcase-grid,
+  .app-detail-grid,
+  .privacy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .phone-gallery {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 790px) {
+  .app-nav-links {
+    display: none;
+  }
+
+  .app-hero {
+    min-height: 76vh;
+  }
+
+  .app-hero::after {
+    background:
+      linear-gradient(0deg, rgba(5, 8, 7, 0.92) 0%, rgba(5, 8, 7, 0.74) 58%, rgba(5, 8, 7, 0.38) 100%);
+  }
+
+  .app-hero-image {
+    background-position: 54% 8%;
+  }
+
+  .app-hero-content {
+    padding: 7.5rem 0 3.2rem;
+    margin-left: auto;
+  }
+
+  .app-strip-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .phone-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .phone-shot-main,
+  .phone-shot-offset {
+    margin-top: 0;
+  }
+
+  .phone-shot img,
+  .detail-image img,
+  .privacy-image img {
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .app-strip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-hero-meta span {
+    font-size: 0.78rem;
+  }
+}

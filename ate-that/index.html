@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ate That | Push to Eat</title>
+    <meta
+      name="description"
+      content="Ate That is a voice-first calorie and macro tracker for iPhone. Log meals with the Action Button, Control Center, Dynamic Island, and optional Apple Health export."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="ate-that.css" />
+  </head>
+  <body class="ate-that-page">
+    <div class="app-background" aria-hidden="true"></div>
+
+    <header class="site-header app-header">
+      <nav class="nav container" aria-label="Ate That navigation">
+        <a class="brand" href="../">
+          <span class="brand-dot"></span>
+          Thalassa Softwaraki LTD
+        </a>
+
+        <ul class="nav-links app-nav-links">
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="support/">Support</a></li>
+        </ul>
+
+        <a class="button button-ghost" href="privacy/">Privacy</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="app-hero" id="home">
+        <div class="app-hero-image" aria-hidden="true"></div>
+        <div class="container app-hero-content reveal">
+          <img class="app-icon" src="assets/app-icon-220.png" alt="Ate That app icon" />
+          <p class="eyebrow">Push to eat</p>
+          <h1>Ate That</h1>
+          <p class="lead">
+            Log meals by voice from the Action Button, get approximate calories and macros,
+            and keep a mindful food diary without turning every meal into homework.
+          </p>
+          <div class="hero-actions">
+            <a class="button app-primary-action" href="#how-it-works">See How It Works</a>
+            <a class="button button-secondary app-secondary-action" href="support/">Get Support</a>
+          </div>
+          <div class="app-hero-meta" aria-label="Ate That highlights">
+            <span>Action Button</span>
+            <span>Dynamic Island</span>
+            <span>Apple Health export</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="app-strip" aria-label="Ate That summary">
+        <div class="container app-strip-grid reveal">
+          <p><strong>No account</strong><span>Local meal history</span></p>
+          <p><strong>No Thalassa server</strong><span>Direct OpenAI processing</span></p>
+          <p><strong>Approximate by design</strong><span>Useful, not fake-precise</span></p>
+          <p><strong>Optional Health export</strong><span>Dietary energy only</span></p>
+        </div>
+      </section>
+
+      <section class="section container" id="how-it-works">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How it works</p>
+          <h2>Hold, dictate, hold again.</h2>
+          <p>
+            Ate That is built for the flow you actually want: log food the moment you think about
+            it, even when your phone is locked. Control Center is available as a backup, and the
+            app itself can log meals too.
+          </p>
+        </div>
+
+        <div class="app-feature-grid">
+          <article class="app-feature-card reveal">
+            <span class="feature-number">01</span>
+            <h3>Use the Action Button</h3>
+            <p>
+              Hold the iPhone Action Button to start recording, say what you ate, then hold again
+              to submit. Ate That shows progress in Live Activities and Dynamic Island.
+            </p>
+          </article>
+
+          <article class="app-feature-card reveal">
+            <span class="feature-number">02</span>
+            <h3>Get useful estimates</h3>
+            <p>
+              The app estimates calories, protein, fat, carbs, and alcohol. It treats calorie
+              tracking as an approximation, because portions, labels, and recipes are approximate too.
+            </p>
+          </article>
+
+          <article class="app-feature-card reveal">
+            <span class="feature-number">03</span>
+            <h3>Review and correct</h3>
+            <p>
+              Open meal details to inspect the transcript and item breakdown. Edit meals by voice,
+              adjust the meal time, or delete entries that do not belong.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section app-showcase" aria-label="Ate That screenshots">
+        <div class="container showcase-grid">
+          <div class="showcase-copy reveal">
+            <p class="eyebrow">Built for iPhone</p>
+            <h2>Designed around the quickest possible capture.</h2>
+            <p>
+              Logging starts from places iPhone users already reach for: Action Button, Control
+              Center, Dynamic Island, Lock Screen, and the app home screen.
+            </p>
+          </div>
+          <div class="phone-gallery reveal">
+            <figure class="phone-shot phone-shot-main">
+              <img src="assets/dashboard-meals.jpg" alt="Ate That dashboard with weekly calories and meals" />
+            </figure>
+            <figure class="phone-shot phone-shot-offset">
+              <img src="assets/control-center.jpg" alt="Ate That Control Center recording button" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container app-detail-section">
+        <div class="app-detail-grid">
+          <figure class="detail-image reveal">
+            <img src="assets/meal-detail.jpg" alt="Ate That meal detail screen with calories, nutrients, items, and transcript" />
+          </figure>
+          <div class="detail-copy reveal">
+            <p class="eyebrow">Trust the record</p>
+            <h2>See why the estimate happened.</h2>
+            <p>
+              Each meal shows the item breakdown, total calories, nutrients, transcript, Apple
+              Health export status, and prompt version metadata. The point is not perfect math;
+              it is a clear, reviewable record.
+            </p>
+            <ul class="app-check-list">
+              <li>Calories are calculated from item estimates.</li>
+              <li>Alcohol is stored in grams and shown as drinks.</li>
+              <li>Empty or unclear recordings are not saved as meals.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section app-privacy" id="privacy">
+        <div class="container privacy-grid">
+          <div class="privacy-copy reveal">
+            <p class="eyebrow">Privacy</p>
+            <h2>Local-first, with direct OpenAI processing.</h2>
+            <p>
+              Ate That does not use its own server or account system. Your meal history stays on
+              your device. When you log a meal, the app sends the necessary audio, transcript, or
+              meal text directly to OpenAI only to transcribe and estimate the meal.
+            </p>
+            <p>
+              Apple Health export is optional. If enabled, Ate That writes estimated dietary
+              energy to Apple Health and does not read your Health data.
+            </p>
+            <a class="button button-secondary app-secondary-action" href="privacy/">Read Privacy Policy</a>
+          </div>
+          <figure class="privacy-image reveal">
+            <img src="assets/dynamic-island-listening.jpg" alt="Ate That Dynamic Island listening state" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="app-cta reveal">
+          <p class="eyebrow">Support</p>
+          <h2>Questions, bugs, or TestFlight feedback?</h2>
+          <p>
+            Send feedback to Thalassa Softwaraki LTD. Include your iPhone model, iOS version, and
+            what you were trying to log if the issue is about recognition or estimates.
+          </p>
+          <a class="button app-primary-action" href="mailto:ops@thalassa.dev">ops@thalassa.dev</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Thalassa Softwaraki LTD. All rights reserved.</p>
+        <a href="mailto:ops@thalassa.dev">ops@thalassa.dev</a>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
