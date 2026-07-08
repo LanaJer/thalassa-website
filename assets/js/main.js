@@ -1,8 +1,9 @@
+// Signal JS availability — reveal animations are scoped to `.js` so that
+// content stays visible when scripts don't run.
+document.documentElement.classList.add("js");
+
 const navToggle = document.getElementById("nav-toggle");
 const navLinks = document.getElementById("nav-links");
-const revealEls = document.querySelectorAll(".reveal");
-const yearEl = document.getElementById("year");
-const contactForm = document.getElementById("contact-form");
 
 if (navToggle && navLinks) {
   navToggle.addEventListener("click", () => {
@@ -18,6 +19,8 @@ if (navToggle && navLinks) {
   });
 }
 
+const revealEls = document.querySelectorAll(".reveal");
+
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -28,7 +31,7 @@ if ("IntersectionObserver" in window) {
         }
       });
     },
-    { threshold: 0.14 }
+    { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
   );
 
   revealEls.forEach((el) => observer.observe(el));
@@ -36,10 +39,12 @@ if ("IntersectionObserver" in window) {
   revealEls.forEach((el) => el.classList.add("visible"));
 }
 
+const yearEl = document.getElementById("year");
 if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
 }
 
+const contactForm = document.getElementById("contact-form");
 if (contactForm) {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -49,7 +54,7 @@ if (contactForm) {
     const company = (formData.get("company") || "").toString().trim();
     const message = (formData.get("message") || "").toString().trim();
 
-    const subject = encodeURIComponent(`New inquiry from ${company || "Website"}`);
+    const subject = encodeURIComponent(`New inquiry from ${company || "website"}`);
     const body = encodeURIComponent(
       `Name: ${name}\nCompany: ${company}\n\nMessage:\n${message}\n\nSent from thalassa.dev website form.`
     );

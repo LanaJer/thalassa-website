@@ -3,27 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thalassa Softwaraki LTD | AI Customer Support Systems</title>
+    <title>Thalassa Softwaraki LTD — AI Customer Support Systems</title>
     <meta
       name="description"
-      content="Thalassa Softwaraki LTD builds AI products for customer support teams: guardrailed chat automation, voice support, secure RAG retrieval, and enterprise on-prem deployment."
+      content="Thalassa Softwaraki LTD builds AI products for customer support teams: guardrailed chat automation, voice support, permission-aware RAG retrieval, and enterprise on-prem deployment."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap"
-      rel="stylesheet"
+    <link rel="canonical" href="https://thalassa.dev/" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Thalassa Softwaraki LTD" />
+    <meta property="og:title" content="Thalassa Softwaraki LTD — AI Customer Support Systems" />
+    <meta
+      property="og:description"
+      content="Guardrailed chat automation, voice support, permission-aware RAG, and on-prem deployment for customer support teams."
     />
-    <link rel="stylesheet" href="styles.css" />
+    <meta property="og:url" content="https://thalassa.dev/" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preload" href="/assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
   <body>
-    <div class="site-background" aria-hidden="true"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="sea-background" aria-hidden="true"></div>
 
     <header class="site-header">
       <nav class="nav container" aria-label="Main navigation">
-        <a class="brand" href="#home">
-          <span class="brand-dot"></span>
-          Thalassa Softwaraki LTD
+        <a class="brand" href="/">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <defs>
+              <linearGradient id="brand-g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#35e0c5" />
+                <stop offset="1" stop-color="#41b1f2" />
+              </linearGradient>
+            </defs>
+            <rect width="64" height="64" rx="16" fill="#0b2231" />
+            <path d="M10 40c6.5-9 13.5-9 20 0s13.5 9 20 0" stroke="url(#brand-g)" stroke-width="5" fill="none" stroke-linecap="round" />
+            <path d="M15 27c5-6.5 10-6.5 15 0s10 6.5 15 0" stroke="url(#brand-g)" stroke-width="3.6" fill="none" stroke-linecap="round" opacity="0.55" />
+          </svg>
+          Thalassa Softwaraki
         </a>
 
         <button
@@ -39,110 +57,142 @@
         </button>
 
         <ul class="nav-links" id="nav-links">
-          <li><a href="#home">Home</a></li>
           <li><a href="#products">Products</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="/ate-that/">Ate That</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <a class="button button-ghost" href="mailto:ops@thalassa.dev">Book a Demo</a>
+        <a class="button button-small nav-cta" href="mailto:ops@thalassa.dev">Book a demo</a>
       </nav>
     </header>
 
-    <main>
-      <section class="hero section container reveal" id="home">
-        <div class="hero-copy">
-          <p class="eyebrow">Cyprus-based AI support systems</p>
-          <h1>Support automation that is fast, safe, and enterprise-ready.</h1>
+    <main id="main">
+      <section class="hero container" id="home">
+        <div class="hero-sonar" aria-hidden="true"></div>
+
+        <div class="hero-copy reveal">
+          <p class="eyebrow">AI support systems · Limassol, Cyprus</p>
+          <h1>Customer support AI, built for the <span class="grad-text">deep&nbsp;end</span>.</h1>
           <p class="lead">
-            Thalassa Softwaraki LTD builds practical AI products for customer support teams:
-            reliable chat automation, voice support workflows, secure knowledge retrieval, and
-            on-prem deployment for strict compliance environments.
+            Thalassa Softwaraki builds practical AI for support teams that can’t afford to
+            improvise: guardrailed chat automation, voice workflows, permission-aware knowledge
+            retrieval, and on-prem deployment for strict compliance environments.
           </p>
           <div class="hero-actions">
-            <a class="button" href="#products">Explore Products</a>
-            <a class="button button-secondary" href="mailto:ops@thalassa.dev"
-              >Contact Us</a
-            >
+            <a class="button" href="#products">Explore the platform</a>
+            <a class="button button-outline" href="mailto:ops@thalassa.dev">Talk to us</a>
           </div>
           <div class="hero-meta">
-            <span>Built for modern support orgs</span>
-            <span>Integrates with existing CRM stack</span>
-            <span>Designed for regulated teams</span>
+            <span>Guardrails-first architecture</span>
+            <span>Human handoff by design</span>
+            <span>Works with your CRM stack</span>
           </div>
         </div>
 
-        <aside class="hero-panel">
-          <p class="panel-label">Core Integrations</p>
-          <ul>
-            <li>Intercom</li>
-            <li>Salesforce Service Cloud</li>
-            <li>Freshdesk</li>
-          </ul>
-          <p>
-            Plug AI into your existing operations without replacing ticketing, telephony, or
-            reporting.
-          </p>
-        </aside>
-      </section>
-
-      <section class="strip">
-        <div class="container strip-grid reveal">
-          <p>Guardrails-first architecture</p>
-          <p>Human handoff by design</p>
-          <p>Permission-aware retrieval</p>
-          <p>Enterprise deployment options</p>
+        <div class="chat-panel reveal" role="img" aria-label="Illustration of an AI agent resolving a support conversation with policy checks and a human handoff path">
+          <div class="chat-head">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Live resolution · Tier 1
+          </div>
+          <div class="chat-msg customer">
+            <span class="msg-label">Customer</span>
+            My invoice shows the old plan price — I upgraded two weeks ago. Can you fix it?
+          </div>
+          <div class="chat-msg agent">
+            <span class="msg-label">Thalassa Agent</span>
+            You’re right — the upgrade applied mid-cycle. I’ve issued a prorated credit of €41.60
+            to your next invoice and sent a corrected copy to your billing email.
+          </div>
+          <div class="chat-chips">
+            <span class="ok">✓ Policy check passed</span>
+            <span>Source: billing-proration.md</span>
+            <span>Escalation path: ready</span>
+          </div>
         </div>
       </section>
+
+      <div class="ticker" aria-label="Platform capabilities">
+        <div class="ticker-track">
+          <span>Guardrailed automation</span>
+          <span>PSTN &amp; web voice</span>
+          <span>Permission-aware RAG</span>
+          <span>On-prem deployment</span>
+          <span>Human handoff</span>
+          <span>Audit-friendly logs</span>
+          <span aria-hidden="true">Guardrailed automation</span>
+          <span aria-hidden="true">PSTN &amp; web voice</span>
+          <span aria-hidden="true">Permission-aware RAG</span>
+          <span aria-hidden="true">On-prem deployment</span>
+          <span aria-hidden="true">Human handoff</span>
+          <span aria-hidden="true">Audit-friendly logs</span>
+        </div>
+      </div>
 
       <section class="section container" id="products">
         <div class="section-heading reveal">
           <p class="eyebrow">Products</p>
           <h2>Purpose-built modules for support operations</h2>
-          <p>
-            Each product can run independently or as a connected platform, so teams can start
-            small and scale into a full AI support stack.
+          <p class="lead">
+            Each product runs independently or as a connected platform — start with one channel
+            and scale into a full AI support stack.
           </p>
         </div>
 
-        <div class="product-grid">
+        <div class="bento">
           <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                <path d="M8 9h8M8 13h5" />
+              </svg>
+            </span>
             <h3>Customer Support AI for Text Chats</h3>
             <p>
               Automate high-volume conversations with a guardrailed assistant that understands
-              context, follows policy, and escalates edge cases to human agents. The system can
-              resolve repetitive intent classes instantly while keeping response quality aligned
-              with your brand voice and compliance requirements.
+              context, follows policy, and escalates edge cases to human agents — resolving
+              repetitive intents instantly while staying on brand and on policy.
             </p>
             <ul>
-              <li>Safety guardrails to prevent risky or off-policy answers.</li>
+              <li>Safety guardrails that prevent risky or off-policy answers.</li>
               <li>CRM-native workflows with Intercom, Salesforce, and Freshdesk.</li>
               <li>Conversation summaries and action extraction for faster follow-up.</li>
             </ul>
           </article>
 
           <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12h2m3-4v8m3-11v14m3-11v8m3-6v4m3-5v6m3-4v2" />
+              </svg>
+            </span>
             <h3>Voice Support Module</h3>
             <p>
-              Run AI-assisted support over both telephone lines and web-based calls. The voice
-              layer can triage incoming requests, answer common issues, and route callers to the
-              right specialist with context attached. Teams can support users around the clock
-              while preserving a smooth handoff path to live agents.
+              AI-assisted support over telephone lines and web calls: triage incoming requests,
+              answer common issues, and route callers to the right specialist with context
+              attached.
             </p>
             <ul>
-              <li>Support for PSTN telephony and browser-based voice sessions.</li>
-              <li>Real-time transcription, intent detection, and call summarization.</li>
+              <li>PSTN telephony and browser-based voice sessions.</li>
+              <li>Real-time transcription, intent detection, and call summaries.</li>
               <li>Agent-assist prompts and post-call CRM updates.</li>
             </ul>
           </article>
 
           <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5.5" rx="8" ry="3" />
+                <path d="M4 5.5V12c0 1.66 3.58 3 8 3s8-1.34 8-3V5.5" />
+                <path d="M4 12v6.5c0 1.66 3.58 3 8 3 1.2 0 2.34-.1 3.36-.28" />
+                <circle cx="18.5" cy="18.5" r="3" />
+                <path d="m22.5 22.5-1.9-1.9" />
+              </svg>
+            </span>
             <h3>RAG Module with Access Controls</h3>
             <p>
-              Enable complex semantic query handling across internal knowledge, policies, and
-              support history with retrieval-augmented generation. Built-in access boundaries allow
-              responses to respect per-employee and per-group permissions, so users only see data
-              they are authorized to access.
+              Semantic answers across internal knowledge, policies, and support history — with
+              access boundaries so responses respect per-employee and per-group permissions.
             </p>
             <ul>
               <li>Semantic search across documents, tickets, runbooks, and SOPs.</li>
@@ -152,58 +202,68 @@
           </article>
 
           <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-3.5 8-10V5.5L12 2 4 5.5V12c0 6.5 8 10 8 10z" />
+                <path d="m8.8 11.8 2.2 2.2 4.2-4.5" />
+              </svg>
+            </span>
             <h3>Enterprise On-Premises Deployment</h3>
             <p>
-              Deploy the platform in your own infrastructure when data residency, governance, or
-              internal security policy requires full environment control. The architecture supports
-              private networking, isolated model access, and enterprise identity standards while
-              retaining feature parity with cloud deployments.
+              Run the platform in your own infrastructure when data residency, governance, or
+              internal security policy requires full environment control — private networking,
+              isolated model access, and enterprise identity standards with feature parity to
+              cloud deployments.
             </p>
             <ul>
               <li>Private cloud or data-center deployment options.</li>
-              <li>Integration with enterprise SSO and internal security tooling.</li>
+              <li>Enterprise SSO and internal security tooling integration.</li>
               <li>Designed for strict compliance and regulated industries.</li>
             </ul>
           </article>
         </div>
       </section>
 
-      <section class="section section-about" id="about">
-        <div class="container about-grid">
-          <div class="about-copy reveal">
+      <section class="section container" id="about">
+        <div class="about-grid">
+          <div class="reveal">
             <p class="eyebrow">About</p>
-            <h2>Focused on practical AI that support teams can trust</h2>
-            <p>
-              Thalassa Softwaraki LTD is a Cyprus company building AI products for customer
-              support. We focus on reliability, policy alignment, and smooth integration with the
-              tools teams already use.
+            <h2>Practical AI that support teams can trust</h2>
+            <p class="lead">
+              Thalassa — Greek for “the sea” — is a Cyprus software company focused on
+              reliability, policy alignment, and smooth integration with the tools support teams
+              already use.
             </p>
-            <p>
-              Company details: registered in Cyprus as <strong>HE 466541</strong>, active status,
-              headquartered in Limassol.
-            </p>
+            <ul class="fact-list">
+              <li><span class="k">Company</span> <span class="v">Thalassa Softwaraki LTD</span></li>
+              <li><span class="k">Registration</span> <span class="v">Cyprus · HE 466541</span></li>
+              <li><span class="k">VAT</span> <span class="v">60106502M</span></li>
+              <li><span class="k">Status</span> <span class="v">Active</span></li>
+              <li><span class="k">Headquarters</span> <span class="v">Limassol, Cyprus</span></li>
+              <li><span class="k">Contact</span> <span class="v">ops@thalassa.dev</span></li>
+            </ul>
           </div>
 
-          <div class="about-cards">
-            <article class="about-card reveal">
-              <h3>Reliability Over Demos</h3>
+          <div class="principles">
+            <article class="principle reveal">
+              <h3>Reliability over demos</h3>
               <p>
                 We prioritize repeatable outcomes in production environments, not just impressive
                 one-off interactions.
               </p>
             </article>
-            <article class="about-card reveal">
-              <h3>Security and Control</h3>
+            <article class="principle reveal">
+              <h3>Security and control</h3>
               <p>
                 Permission boundaries, auditability, and deployment flexibility are first-class
                 product requirements.
               </p>
             </article>
-            <article class="about-card reveal">
-              <h3>Measurable Impact</h3>
+            <article class="principle reveal">
+              <h3>Measurable impact</h3>
               <p>
-                We target concrete metrics: faster resolution times, lower support load, and better
-                customer experience.
+                We target concrete metrics: faster resolution times, lower support load, and
+                better customer experience.
               </p>
             </article>
           </div>
@@ -216,42 +276,77 @@
             <p class="eyebrow">Contact</p>
             <h2>Let’s design your AI support architecture</h2>
             <p>
-              Share your channels, ticket volume, compliance requirements, and current tooling. We
-              will propose a practical rollout plan.
+              Share your channels, ticket volume, compliance requirements, and current tooling —
+              we’ll propose a practical rollout plan.
             </p>
             <a class="contact-email" href="mailto:ops@thalassa.dev">ops@thalassa.dev</a>
             <p class="contact-location">Limassol, Cyprus</p>
           </div>
 
           <form class="contact-form" id="contact-form">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" required />
-
-            <label for="company">Company</label>
-            <input id="company" name="company" type="text" placeholder="Your company" required />
-
-            <label for="message">What do you want to automate?</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              placeholder="Describe your support stack and priorities"
-              required
-            ></textarea>
-
-            <button class="button" type="submit">Send Email</button>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+            </div>
+            <div class="field">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" autocomplete="organization" placeholder="Your company" required />
+            </div>
+            <div class="field">
+              <label for="message">What do you want to automate?</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Describe your support stack and priorities"
+                required
+              ></textarea>
+            </div>
+            <button class="button" type="submit">Compose email</button>
+            <p class="form-note">Opens your email app with the message pre-filled — nothing is sent from this page.</p>
           </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> Thalassa Softwaraki LTD. All rights reserved.</p>
-        <a href="mailto:ops@thalassa.dev">ops@thalassa.dev</a>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="/">
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <rect width="64" height="64" rx="16" fill="#0b2231" />
+                <path d="M10 40c6.5-9 13.5-9 20 0s13.5 9 20 0" stroke="#35e0c5" stroke-width="5" fill="none" stroke-linecap="round" />
+                <path d="M15 27c5-6.5 10-6.5 15 0s10 6.5 15 0" stroke="#41b1f2" stroke-width="3.6" fill="none" stroke-linecap="round" opacity="0.55" />
+              </svg>
+              Thalassa Softwaraki
+            </a>
+            <p>AI customer support systems, engineered in Limassol for teams in regulated waters.</p>
+          </div>
+
+          <nav class="footer-links" aria-label="Footer">
+            <ul>
+              <li class="col-title">Company</li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <ul>
+              <li class="col-title">Ate That</li>
+              <li><a href="/ate-that/">Overview</a></li>
+              <li><a href="/ate-that/support/">Support</a></li>
+              <li><a href="/ate-that/privacy/">Privacy policy</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-legal">
+          <p>© <span id="year">2026</span> Thalassa Softwaraki LTD · Registered in Cyprus, HE 466541 · VAT 60106502M</p>
+          <a href="mailto:ops@thalassa.dev">ops@thalassa.dev</a>
+        </div>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>
