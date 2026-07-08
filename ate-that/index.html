@@ -3,69 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ate That | Push to Eat</title>
+    <title>Ate That — Push to Eat | Voice Calorie Tracker for iPhone</title>
     <meta
       name="description"
-      content="Ate That is a voice-first calorie and macro tracker for iPhone. Log meals with the Action Button, Control Center, Dynamic Island, and optional Apple Health export."
+      content="Ate That is a voice-first calorie and macro tracker for iPhone. Log meals with the Action Button, Control Center, and Dynamic Island, with optional Apple Health export."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap"
-      rel="stylesheet"
+    <link rel="canonical" href="https://thalassa.dev/ate-that/" />
+    <link rel="icon" type="image/png" href="/ate-that/assets/app-icon-220.png" />
+    <link rel="apple-touch-icon" href="/ate-that/assets/app-icon-220.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Thalassa Softwaraki LTD" />
+    <meta property="og:title" content="Ate That — Push to Eat" />
+    <meta
+      property="og:description"
+      content="Log meals by voice from the iPhone Action Button. Approximate calories and macros, local-first, no account."
     />
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="ate-that.css" />
+    <meta property="og:url" content="https://thalassa.dev/ate-that/" />
+    <meta property="og:image" content="https://thalassa.dev/ate-that/assets/app-icon-220.png" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preload" href="/assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/ate-that.css" />
   </head>
-  <body class="ate-that-page">
-    <div class="app-background" aria-hidden="true"></div>
+  <body class="ate">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header app-header">
+    <header class="site-header">
       <nav class="nav container" aria-label="Ate That navigation">
-        <a class="brand" href="../">
-          <span class="brand-dot"></span>
-          Thalassa Softwaraki LTD
+        <a class="brand" href="/">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <defs>
+              <linearGradient id="brand-g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#1db866" />
+                <stop offset="1" stop-color="#0ba58f" />
+              </linearGradient>
+            </defs>
+            <rect width="64" height="64" rx="16" fill="#10241a" />
+            <path d="M10 40c6.5-9 13.5-9 20 0s13.5 9 20 0" stroke="url(#brand-g)" stroke-width="5" fill="none" stroke-linecap="round" />
+            <path d="M15 27c5-6.5 10-6.5 15 0s10 6.5 15 0" stroke="url(#brand-g)" stroke-width="3.6" fill="none" stroke-linecap="round" opacity="0.55" />
+          </svg>
+          Thalassa Softwaraki
         </a>
 
-        <ul class="nav-links app-nav-links">
-          <li><a href="#how-it-works">How It Works</a></li>
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-controls="nav-links"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#how-it-works">How it works</a></li>
           <li><a href="#privacy">Privacy</a></li>
-          <li><a href="support/">Support</a></li>
+          <li><a href="/ate-that/support/">Support</a></li>
         </ul>
 
-        <a class="button button-ghost" href="privacy/">Privacy</a>
+        <a class="button button-small nav-cta" href="/ate-that/privacy/">Privacy policy</a>
       </nav>
     </header>
 
-    <main>
-      <section class="app-hero" id="home">
-        <div class="app-hero-image" aria-hidden="true"></div>
-        <div class="container app-hero-content reveal">
-          <img class="app-icon" src="assets/app-icon-220.png" alt="Ate That app icon" />
-          <p class="eyebrow">Push to eat</p>
-          <h1>Ate That</h1>
-          <p class="lead">
-            Log meals by voice from the Action Button, get approximate calories and macros,
-            and keep a mindful food diary without turning every meal into homework.
-          </p>
-          <div class="hero-actions">
-            <a class="button app-primary-action" href="#how-it-works">See How It Works</a>
-            <a class="button button-secondary app-secondary-action" href="support/">Get Support</a>
+    <main id="main">
+      <section class="ate-hero">
+        <div class="container ate-hero-inner">
+          <div class="reveal">
+            <img
+              class="app-icon"
+              src="/ate-that/assets/app-icon-220.png"
+              alt="Ate That app icon"
+              width="220"
+              height="220"
+            />
+            <p class="eyebrow">Push to eat</p>
+            <h1>Ate That</h1>
+            <p class="lead">
+              Log meals by voice from the Action Button, get approximate calories and macros, and
+              keep a mindful food diary — without turning every meal into homework.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#how-it-works">See how it works</a>
+              <a class="button button-outline" href="/ate-that/support/" style="border-color: rgba(255,255,255,0.3); color: #fff;">Get support</a>
+            </div>
+            <div class="hero-meta" aria-label="Ate That highlights">
+              <span>Action Button</span>
+              <span>Dynamic Island</span>
+              <span>Apple Health export</span>
+            </div>
           </div>
-          <div class="app-hero-meta" aria-label="Ate That highlights">
-            <span>Action Button</span>
-            <span>Dynamic Island</span>
-            <span>Apple Health export</span>
-          </div>
+
+          <figure class="ate-hero-phone reveal">
+            <img
+              src="/ate-that/assets/dynamic-island-listening.jpg"
+              alt="Ate That listening in the Dynamic Island while recording a meal"
+              width="507"
+              height="1100"
+              fetchpriority="high"
+            />
+          </figure>
         </div>
       </section>
 
-      <section class="app-strip" aria-label="Ate That summary">
-        <div class="container app-strip-grid reveal">
-          <p><strong>No account</strong><span>Local meal history</span></p>
-          <p><strong>No Thalassa server</strong><span>Direct OpenAI processing</span></p>
-          <p><strong>Approximate by design</strong><span>Useful, not fake-precise</span></p>
-          <p><strong>Optional Health export</strong><span>Dietary energy only</span></p>
+      <section class="fact-strip" aria-label="Ate That at a glance">
+        <div class="container fact-strip-grid">
+          <div><strong>No account</strong><span>Local meal history</span></div>
+          <div><strong>No Thalassa server</strong><span>Direct OpenAI processing</span></div>
+          <div><strong>Approximate by design</strong><span>Useful, not fake-precise</span></div>
+          <div><strong>Optional Health export</strong><span>Dietary energy only</span></div>
         </div>
       </section>
 
@@ -73,78 +121,95 @@
         <div class="section-heading reveal">
           <p class="eyebrow">How it works</p>
           <h2>Hold, dictate, hold again.</h2>
-          <p>
-            Ate That is built for the flow you actually want: log food the moment you think about
-            it, even when your phone is locked. Control Center is available as a backup, and the
-            app itself can log meals too.
+          <p class="lead">
+            Built for the flow you actually want: log food the moment you think about it, even
+            when your phone is locked. Control Center works as a backup, and the app can log
+            meals too.
           </p>
         </div>
 
-        <div class="app-feature-grid">
-          <article class="app-feature-card reveal">
-            <span class="feature-number">01</span>
+        <div class="steps-grid">
+          <article class="step-card reveal">
+            <span class="step-num" aria-hidden="true">1</span>
             <h3>Use the Action Button</h3>
             <p>
               Hold the iPhone Action Button to start recording, say what you ate, then hold again
-              to submit. Ate That shows progress in Live Activities and Dynamic Island.
+              to submit. Ate That shows progress in Live Activities and the Dynamic Island.
             </p>
           </article>
-
-          <article class="app-feature-card reveal">
-            <span class="feature-number">02</span>
+          <article class="step-card reveal">
+            <span class="step-num" aria-hidden="true">2</span>
             <h3>Get useful estimates</h3>
             <p>
               The app estimates calories, protein, fat, carbs, and alcohol. It treats calorie
-              tracking as an approximation, because portions, labels, and recipes are approximate too.
+              tracking as an approximation — because portions, labels, and recipes are
+              approximate too.
             </p>
           </article>
-
-          <article class="app-feature-card reveal">
-            <span class="feature-number">03</span>
+          <article class="step-card reveal">
+            <span class="step-num" aria-hidden="true">3</span>
             <h3>Review and correct</h3>
             <p>
-              Open meal details to inspect the transcript and item breakdown. Edit meals by voice,
-              adjust the meal time, or delete entries that do not belong.
+              Open meal details to inspect the transcript and item breakdown. Edit meals by
+              voice, adjust the meal time, or delete entries that don’t belong.
             </p>
           </article>
         </div>
       </section>
 
-      <section class="section app-showcase" aria-label="Ate That screenshots">
+      <section class="section ate-showcase" aria-label="Ate That screenshots">
         <div class="container showcase-grid">
-          <div class="showcase-copy reveal">
+          <div class="reveal">
             <p class="eyebrow">Built for iPhone</p>
             <h2>Designed around the quickest possible capture.</h2>
-            <p>
-              Logging starts from places iPhone users already reach for: Action Button, Control
-              Center, Dynamic Island, Lock Screen, and the app home screen.
+            <p class="lead">
+              Logging starts from the places iPhone users already reach for: Action Button,
+              Control Center, Dynamic Island, Lock Screen, and the app home screen.
             </p>
           </div>
           <div class="phone-gallery reveal">
-            <figure class="phone-shot phone-shot-main">
-              <img src="assets/dashboard-meals.jpg" alt="Ate That dashboard with weekly calories and meals" />
+            <figure class="phone-shot">
+              <img
+                src="/ate-that/assets/dashboard-meals.jpg"
+                alt="Ate That dashboard with weekly calories and meals"
+                width="507"
+                height="1100"
+                loading="lazy"
+              />
             </figure>
             <figure class="phone-shot phone-shot-offset">
-              <img src="assets/control-center.jpg" alt="Ate That Control Center recording button" />
+              <img
+                src="/ate-that/assets/control-center.jpg"
+                alt="Ate That Control Center recording button"
+                width="507"
+                height="1100"
+                loading="lazy"
+              />
             </figure>
           </div>
         </div>
       </section>
 
-      <section class="section container app-detail-section">
-        <div class="app-detail-grid">
-          <figure class="detail-image reveal">
-            <img src="assets/meal-detail.jpg" alt="Ate That meal detail screen with calories, nutrients, items, and transcript" />
+      <section class="section container">
+        <div class="detail-grid">
+          <figure class="detail-phone reveal">
+            <img
+              src="/ate-that/assets/meal-detail.jpg"
+              alt="Ate That meal detail screen with calories, nutrients, items, and transcript"
+              width="507"
+              height="1100"
+              loading="lazy"
+            />
           </figure>
-          <div class="detail-copy reveal">
+          <div class="reveal">
             <p class="eyebrow">Trust the record</p>
             <h2>See why the estimate happened.</h2>
-            <p>
+            <p class="lead">
               Each meal shows the item breakdown, total calories, nutrients, transcript, Apple
-              Health export status, and prompt version metadata. The point is not perfect math;
-              it is a clear, reviewable record.
+              Health export status, and prompt version metadata. The point isn’t perfect math —
+              it’s a clear, reviewable record.
             </p>
-            <ul class="app-check-list">
+            <ul class="check-list">
               <li>Calories are calculated from item estimates.</li>
               <li>Alcohol is stored in grams and shown as drinks.</li>
               <li>Empty or unclear recordings are not saved as meals.</li>
@@ -153,48 +218,83 @@
         </div>
       </section>
 
-      <section class="section app-privacy" id="privacy">
+      <section class="section privacy-band" id="privacy">
         <div class="container privacy-grid">
-          <div class="privacy-copy reveal">
+          <div class="reveal">
             <p class="eyebrow">Privacy</p>
             <h2>Local-first, with direct OpenAI processing.</h2>
             <p>
-              Ate That does not use its own server or account system. Your meal history stays on
+              Ate That doesn’t use its own server or account system. Your meal history stays on
               your device. When you log a meal, the app sends the necessary audio, transcript, or
-              meal text directly to OpenAI only to transcribe and estimate the meal.
+              meal text directly to OpenAI — only to transcribe and estimate the meal.
             </p>
             <p>
               Apple Health export is optional. If enabled, Ate That writes estimated dietary
               energy to Apple Health and does not read your Health data.
             </p>
-            <a class="button button-secondary app-secondary-action" href="privacy/">Read Privacy Policy</a>
+            <a class="button" href="/ate-that/privacy/">Read the privacy policy</a>
           </div>
-          <figure class="privacy-image reveal">
-            <img src="assets/dynamic-island-listening.jpg" alt="Ate That Dynamic Island listening state" />
+          <figure class="privacy-phone reveal">
+            <img
+              src="/ate-that/assets/dynamic-island-listening.jpg"
+              alt="Ate That Dynamic Island listening state"
+              width="507"
+              height="1100"
+              loading="lazy"
+            />
           </figure>
         </div>
       </section>
 
       <section class="section container">
-        <div class="app-cta reveal">
+        <div class="ate-cta reveal">
           <p class="eyebrow">Support</p>
           <h2>Questions, bugs, or TestFlight feedback?</h2>
           <p>
             Send feedback to Thalassa Softwaraki LTD. Include your iPhone model, iOS version, and
             what you were trying to log if the issue is about recognition or estimates.
           </p>
-          <a class="button app-primary-action" href="mailto:ops@thalassa.dev">ops@thalassa.dev</a>
+          <a class="button" href="mailto:ops@thalassa.dev">ops@thalassa.dev</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> Thalassa Softwaraki LTD. All rights reserved.</p>
-        <a href="mailto:ops@thalassa.dev">ops@thalassa.dev</a>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="/">
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <rect width="64" height="64" rx="16" fill="#10241a" />
+                <path d="M10 40c6.5-9 13.5-9 20 0s13.5 9 20 0" stroke="#1db866" stroke-width="5" fill="none" stroke-linecap="round" />
+                <path d="M15 27c5-6.5 10-6.5 15 0s10 6.5 15 0" stroke="#0ba58f" stroke-width="3.6" fill="none" stroke-linecap="round" opacity="0.55" />
+              </svg>
+              Thalassa Softwaraki
+            </a>
+            <p>Ate That is built by Thalassa Softwaraki LTD in Limassol, Cyprus.</p>
+          </div>
+
+          <nav class="footer-links" aria-label="Footer">
+            <ul>
+              <li class="col-title">Ate That</li>
+              <li><a href="/ate-that/support/">Support</a></li>
+              <li><a href="/ate-that/privacy/">Privacy policy</a></li>
+            </ul>
+            <ul>
+              <li class="col-title">Company</li>
+              <li><a href="/">Thalassa home</a></li>
+              <li><a href="/#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-legal">
+          <p>© <span id="year">2026</span> Thalassa Softwaraki LTD · Registered in Cyprus, HE 466541 · VAT 60106502M</p>
+          <a href="mailto:ops@thalassa.dev">ops@thalassa.dev</a>
+        </div>
       </div>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>

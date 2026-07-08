@@ -8,125 +8,125 @@
       name="description"
       content="Privacy policy for Ate That, a local-first calorie tracking app by Thalassa Softwaraki LTD."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="canonical" href="https://thalassa.dev/ate-that/privacy/" />
+    <link rel="icon" type="image/png" href="/ate-that/assets/app-icon-220.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ate That Privacy Policy" />
+    <meta property="og:url" content="https://thalassa.dev/ate-that/privacy/" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preload" href="/assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/ate-that.css" />
   </head>
-  <body>
-    <div class="site-background" aria-hidden="true"></div>
+  <body class="ate">
+    <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
       <nav class="nav container" aria-label="Main navigation">
-        <a class="brand" href="../">
-          <span class="brand-dot"></span>
+        <a class="brand" href="/ate-that/">
+          <img src="/ate-that/assets/app-icon-220.png" alt="" width="30" height="30" style="border-radius: 8px;" />
           Ate That
         </a>
-
-        <a class="button button-ghost" href="../support/">Support</a>
+        <a class="button button-small button-outline nav-cta" href="/ate-that/support/">Support</a>
       </nav>
     </header>
 
-    <main>
-      <section class="section container">
-        <div class="section-heading">
-          <p class="eyebrow">Ate That</p>
-          <h1>Privacy Policy</h1>
-          <p class="lead">
-            Ate That is a local-first calorie tracking app. It is designed to help you log
-            approximate calories while keeping your meal history on your device.
+    <main id="main">
+      <div class="container doc-header">
+        <p class="eyebrow">Ate That</p>
+        <h1>Privacy Policy</h1>
+        <p class="lead">
+          Ate That is a local-first calorie tracking app. It is designed to help you log
+          approximate calories while keeping your meal history on your device.
+        </p>
+        <p class="doc-updated">Last updated: May 30, 2026</p>
+      </div>
+
+      <div class="container doc-body">
+        <section>
+          <h2>What Ate That Stores</h2>
+          <p>
+            Ate That stores your meal records locally on your device using Apple's local storage
+            frameworks. Meal records may include meal titles, estimated calories, nutrients, item
+            breakdowns, timestamps, transcripts, and Apple Health export status.
           </p>
-          <p>Last updated: May 30, 2026</p>
-        </div>
+          <p>
+            Ate That does not create user accounts and does not operate a customer database for
+            your meal history.
+          </p>
+        </section>
 
-        <div class="product-grid">
-          <article class="card">
-            <h2>What Ate That Stores</h2>
-            <p>
-              Ate That stores your meal records locally on your device using Apple's local storage
-              frameworks. Meal records may include meal titles, estimated calories, nutrients,
-              item breakdowns, timestamps, transcripts, and Apple Health export status.
-            </p>
-            <p>
-              Ate That does not create user accounts and does not operate a customer database for
-              your meal history.
-            </p>
-          </article>
+        <section>
+          <h2>OpenAI Processing</h2>
+          <p>
+            When you submit a voice recording, Ate That sends the audio directly to OpenAI to
+            create a transcript. Ate That then sends the transcript or meal text directly to
+            OpenAI to estimate calories, nutrients, and meal items.
+          </p>
+          <p>
+            The app may use an included OpenAI API key or an API key you provide in Settings. A
+            key you provide is stored in the iOS Keychain on your device.
+          </p>
+        </section>
 
-          <article class="card">
-            <h2>OpenAI Processing</h2>
-            <p>
-              When you submit a voice recording, Ate That sends the audio directly to OpenAI to
-              create a transcript. Ate That then sends the transcript or meal text directly to
-              OpenAI to estimate calories, nutrients, and meal items.
-            </p>
-            <p>
-              The app may use an included OpenAI API key or an API key you provide in Settings.
-              A key you provide is stored in the iOS Keychain on your device.
-            </p>
-          </article>
+        <section>
+          <h2>Apple Health</h2>
+          <p>
+            Apple Health export is optional. If you enable it, Ate That writes estimated dietary
+            calories to Apple Health for meals logged in the app.
+          </p>
+          <p>
+            Ate That does not read your Apple Health data. If you edit or delete a meal, Ate That
+            attempts to update or remove the Apple Health sample it created.
+          </p>
+        </section>
 
-          <article class="card">
-            <h2>Apple Health</h2>
-            <p>
-              Apple Health export is optional. If you enable it, Ate That writes estimated dietary
-              calories to Apple Health for meals logged in the app.
-            </p>
-            <p>
-              Ate That does not read your Apple Health data. If you edit or delete a meal, Ate That
-              attempts to update or remove the Apple Health sample it created.
-            </p>
-          </article>
+        <section>
+          <h2>Analytics and Tracking</h2>
+          <p>
+            Ate That does not use third-party analytics, advertising SDKs, or cross-app tracking.
+            Thalassa Softwaraki LTD does not sell your data.
+          </p>
+          <p>
+            Apple may provide standard TestFlight, App Store, and crash diagnostic information
+            according to your Apple settings.
+          </p>
+        </section>
 
-          <article class="card">
-            <h2>Analytics and Tracking</h2>
-            <p>
-              Ate That does not use third-party analytics, advertising SDKs, or cross-app tracking.
-              Thalassa Softwaraki LTD does not sell your data.
-            </p>
-            <p>
-              Apple may provide standard TestFlight, App Store, and crash diagnostic information
-              according to your Apple settings.
-            </p>
-          </article>
+        <section>
+          <h2>Data Deletion</h2>
+          <p>
+            You can delete individual meals in Ate That. The app also provides a local data
+            deletion control for removing meals stored by Ate That on your device.
+          </p>
+          <p>
+            If Apple Health export is enabled, deleting meals also attempts to remove Apple
+            Health calorie samples created by Ate That.
+          </p>
+        </section>
 
-          <article class="card">
-            <h2>Data Deletion</h2>
-            <p>
-              You can delete individual meals in Ate That. The app also provides a local data
-              deletion control for removing meals stored by Ate That on your device.
-            </p>
-            <p>
-              If Apple Health export is enabled, deleting meals also attempts to remove Apple
-              Health calorie samples created by Ate That.
-            </p>
-          </article>
-
-          <article class="card">
-            <h2>Contact</h2>
-            <p>
-              If you have privacy questions about Ate That, contact Thalassa Softwaraki LTD at
-              <a href="mailto:ops@thalassa.dev">ops@thalassa.dev</a>.
-            </p>
-            <p>
-              Thalassa Softwaraki LTD is registered in Cyprus as HE 466541 and based in Limassol,
-              Cyprus.
-            </p>
-          </article>
-        </div>
-      </section>
+        <section>
+          <h2>Contact</h2>
+          <p>
+            If you have privacy questions about Ate That, contact Thalassa Softwaraki LTD at
+            <a href="mailto:ops@thalassa.dev">ops@thalassa.dev</a>.
+          </p>
+          <p>
+            Thalassa Softwaraki LTD is registered in Cyprus as HE 466541 (VAT 60106502M) and
+            based in Limassol, Cyprus.
+          </p>
+        </section>
+      </div>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> Thalassa Softwaraki LTD. All rights reserved.</p>
+      <div class="container footer-legal" style="margin-top: 0; padding-top: 0; border-top: 0;">
+        <p>© <span id="year">2026</span> Thalassa Softwaraki LTD · Registered in Cyprus, HE 466541 · VAT 60106502M</p>
         <a href="mailto:ops@thalassa.dev">ops@thalassa.dev</a>
       </div>
     </footer>
 
-    <script src="../../script.js"></script>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>
