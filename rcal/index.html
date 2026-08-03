@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RCal — Calendar Mirroring for Mac</title>
+    <meta name="description" content="RCal securely mirrors selected calendar events into a destination calendar, right on your Mac. No account, analytics, or external server." />
+    <link rel="canonical" href="https://thalassa.dev/rcal/" />
+    <link rel="icon" type="image/png" href="/rcal/assets/app-icon-1024.png" />
+    <link rel="apple-touch-icon" href="/rcal/assets/app-icon-1024.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Thalassa Softwaraki LTD" />
+    <meta property="og:title" content="RCal — Calendar Mirroring for Mac" />
+    <meta property="og:description" content="Keep the calendars your Mac can access visible on your phone, with privacy controls built in." />
+    <meta property="og:url" content="https://thalassa.dev/rcal/" />
+    <meta property="og:image" content="https://thalassa.dev/rcal/assets/app-icon-1024.png" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preload" href="/assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/rcal.css" />
+  </head>
+  <body class="rcal">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="/rcal/"><img class="rcal-icon" src="/rcal/assets/app-icon-1024.png" alt="" width="32" height="32" /> RCal</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="/rcal/support/">Support</a></li>
+          <li><a href="/rcal/privacy/">Privacy</a></li>
+        </ul>
+        <span class="button button-small nav-cta">Coming to Mac App Store</span>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="rcal-hero">
+        <div class="container rcal-hero-inner">
+          <div>
+            <img class="rcal-icon" src="/rcal/assets/app-icon-1024.png" alt="RCal app icon" width="82" height="82" />
+            <p class="eyebrow">Calendar mirroring for macOS</p>
+            <h1>Your work calendar, where you need it.</h1>
+            <p class="lead">RCal mirrors events from calendars available on your Mac into a calendar you choose—so your schedule can reach your phone without another account or credential.</p>
+            <div class="hero-actions"><span class="button">Coming to Mac App Store</span><a class="button button-outline" href="/rcal/support/">Setup guide</a></div>
+            <div class="hero-meta"><span>Runs on your Mac</span><span>No account</span><span>No analytics</span></div>
+          </div>
+          <div class="mac-window" aria-label="Illustration of RCal mirroring a work calendar into an iCloud calendar">
+            <div class="mac-titlebar"><i></i><i></i><i></i></div>
+            <div class="mac-content">
+              <div class="sync-row"><span class="cal-dot"></span><div class="sync-copy"><strong>Work Calendar</strong><span>Google Workspace · Read</span></div><span class="sync-arrow">→</span></div>
+              <div class="sync-row"><span class="cal-dot blue"></span><div class="sync-copy"><strong>Work (Mirror)</strong><span>iCloud · Write</span></div></div>
+              <div class="sync-status"><span>✓ 24 events in sync</span><span>just now</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rcal-facts"><div class="container rcal-fact-grid"><div><strong>Native EventKit</strong><span>Uses the calendars already on your Mac</span></div><div><strong>Private by design</strong><span>No Thalassa server or analytics</span></div><div><strong>Fine-grained detail</strong><span>Full, title-only, or Busy blocks</span></div><div><strong>Automatic</strong><span>Syncs on a timer, changes, and wake</span></div></div></section>
+
+      <section class="section container" id="how-it-works">
+        <div class="section-heading"><p class="eyebrow">How it works</p><h2>A small bridge between your calendars</h2><p class="lead">Pick what RCal may read, choose where copies should go, and let the menu-bar app keep them aligned.</p></div>
+        <div class="rcal-grid">
+          <article class="rcal-card"><span class="card-icon">1</span><h3>Choose sources</h3><p>Select one or more calendars already configured in macOS Calendar. RCal never asks for the original account password.</p></article>
+          <article class="rcal-card"><span class="card-icon">2</span><h3>Choose a destination</h3><p>Use a dedicated writable calendar. Choose iCloud if you want the mirrored schedule to appear on your iPhone.</p></article>
+          <article class="rcal-card"><span class="card-icon">3</span><h3>Choose detail</h3><p>Mirror full event details, titles and times only, or privacy-first “Busy” blocks with no meeting content.</p></article>
+        </div>
+        <p class="rcal-note"><strong>Work-data reminder:</strong> copying a managed work calendar into a personal account may conflict with your employer’s policy. Check that policy first; use Busy blocks when content must not leave the managed calendar.</p>
+      </section>
+
+      <section class="section container"><div class="about-grid"><div><p class="eyebrow">Made for the menu bar</p><h2>Quiet when everything is working.</h2><p class="lead">RCal runs only while your Mac is awake. Open it when you need status, a manual sync, or settings; otherwise it stays out of the way.</p></div><div class="principles"><article class="principle"><h3>Safe ownership</h3><p>RCal tags its own copies and never edits or removes events it did not create.</p></article><article class="principle"><h3>No cloud service</h3><p>Processing happens locally through Apple’s EventKit framework.</p></article><article class="principle"><h3>User-controlled startup</h3><p>Launch at login is optional and can be turned off at any time.</p></article></div></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-legal"><p>© <span id="year">2026</span> Thalassa Softwaraki LTD · Registered in Cyprus, HE 466541 · VAT 60106502M</p><div><a href="/rcal/privacy/">Privacy</a> · <a href="/rcal/support/">Support</a> · <a href="mailto:ops@thalassa.dev">ops@thalassa.dev</a></div></div></footer>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
