@@ -6,7 +6,7 @@
     <title>Ate That Privacy Policy | Thalassa Softwaraki LTD</title>
     <meta
       name="description"
-      content="Privacy policy for Ate That, a local-first calorie tracking app by Thalassa Softwaraki LTD."
+      content="Privacy policy for Ate That, a voice-first calorie and nutrient tracking app by Thalassa Softwaraki LTD."
     />
     <link rel="canonical" href="https://thalassa.dev/ate-that/privacy/" />
     <link rel="icon" type="image/png" href="/ate-that/assets/app-icon-220.png" />
@@ -37,84 +37,243 @@
         <p class="eyebrow">Ate That</p>
         <h1>Privacy Policy</h1>
         <p class="lead">
-          Ate That is a local-first calorie tracking app. It is designed to help you log
-          approximate calories while keeping your meal history on your device.
+          Ate That keeps your meal history on your device. Voice recordings and meal details are
+          processed only when needed to provide transcription and nutrition estimates.
         </p>
-        <p class="doc-updated">Last updated: May 30, 2026</p>
+        <p class="doc-updated">Effective: August 24, 2026</p>
       </div>
 
       <div class="container doc-body">
         <section>
-          <h2>What Ate That Stores</h2>
+          <h2>Who We Are</h2>
           <p>
-            Ate That stores your meal records locally on your device using Apple's local storage
-            frameworks. Meal records may include meal titles, estimated calories, nutrients, item
-            breakdowns, timestamps, transcripts, and Apple Health export status.
+            Ate That is provided by Thalassa Softwaraki LTD, a company registered in Cyprus as
+            HE 466541 (VAT 60106502M), based in Limassol, Cyprus. Thalassa Softwaraki LTD is the
+            controller of the personal data described in this policy.
           </p>
           <p>
-            Ate That does not create user accounts and does not operate a customer database for
-            your meal history.
+            This policy applies to the Ate That iOS app and the online services used by the app.
           </p>
         </section>
 
         <section>
-          <h2>OpenAI Processing</h2>
+          <h2>Meal History on Your Device</h2>
           <p>
-            When you submit a voice recording, Ate That sends the audio directly to OpenAI to
-            create a transcript. Ate That then sends the transcript or meal text directly to
-            OpenAI to estimate calories, nutrients, and meal items.
+            Your meal history is stored locally on your device using Apple's storage frameworks.
+            It may include meal titles, estimated calories and nutrients, item breakdowns,
+            timestamps, transcripts, prompt versions, and Apple Health export status.
           </p>
           <p>
-            The app may use an included OpenAI API key or an API key you provide in Settings. A
-            key you provide is stored in the iOS Keychain on your device.
+            Audio memos for pending or failed entries may also remain on your device so that you
+            can replay, retry, replace, or delete them. We do not keep a server-side copy of your
+            meal history or these saved memos.
+          </p>
+        </section>
+
+        <section>
+          <h2>Your Account</h2>
+          <p>
+            An Ate That account is created when you use Sign in with Apple. Apple gives us a
+            developer-specific identifier and, if you choose to share it, your email address. The
+            address may be an Apple private relay address. We do not receive your Apple Account
+            password.
+          </p>
+          <p>
+            We store an internal account ID, the Apple identifier, the email information Apple
+            provides, encrypted Apple authorization credentials, and sign-in session records. The
+            app stores its refresh token in the iOS Keychain. See
+            <a href="https://www.apple.com/legal/privacy/data/en/sign-in-with-apple/">Sign in with Apple &amp; Privacy</a>
+            for information about Apple's processing.
+          </p>
+        </section>
+
+        <section>
+          <h2>Voice and Meal Processing</h2>
+          <p>
+            When you submit a voice entry, the app sends the recording over an encrypted
+            connection to our backend. The backend sends the audio to OpenAI for
+            transcription, then sends the transcript and relevant meal context to OpenAI to
+            estimate or edit calories, macronutrients, alcohol, and meal items.
+          </p>
+          <p>
+            We do not write your submitted audio, transcript, meal context, or inference
+            result to its database, object storage, or application logs. This content may be held
+            briefly in memory or temporary instance storage while the request is processed, and
+            is discarded when the request finishes. If a request fails, any review memo shown in
+            Ate That is the local copy on your device.
+          </p>
+          <p>
+            OpenAI processes this content as our service provider. Ate That requests that text
+            responses are not stored as application state. OpenAI states that API data is not
+            used to train its models by default unless the customer opts in, but content may be
+            retained in abuse-monitoring logs for up to 30 days unless a different data-control
+            arrangement applies. Learn more in
+            <a href="https://platform.openai.com/docs/models/default-usage-policies-by-endpoint">OpenAI's API data controls</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2>Service and Usage Data</h2>
+          <p>
+            To operate and protect the service, we keep limited metadata associated with your
+            account. This may include a request ID, operation type, model and prompt version,
+            token counts, response status, processing time, app version, build number, and
+            timestamps. This metadata does not include your recording, transcript, meal names,
+            ingredient list, or inference result.
+          </p>
+          <p>
+            Our infrastructure providers may also process technical information such as IP
+            address, network and device information, and service logs for delivery, security,
+            troubleshooting, and abuse prevention. We use inference usage records to enforce rate
+            limits, investigate failures, prevent misuse, and understand service costs.
           </p>
         </section>
 
         <section>
           <h2>Apple Health</h2>
           <p>
-            Apple Health export is optional. If you enable it, Ate That writes estimated dietary
-            calories to Apple Health for meals logged in the app.
+            Apple Health export is optional and requires your permission. If enabled, Ate That
+            writes its estimates for dietary energy, protein, fat, carbohydrates, and alcohol to
+            Apple Health. Ate That does not import your general Apple Health history into the app.
+            It may access samples created by Ate That in order to reconcile, replace, or delete
+            them when you sync, edit, or delete a meal.
           </p>
           <p>
-            Ate That does not read your Apple Health data. If you edit or delete a meal, Ate That
-            attempts to update or remove the Apple Health sample it created.
+            Health data is handled through Apple's HealthKit framework and is not sent to
+            our servers or OpenAI. You can change Ate That's Health access in iOS Settings or the
+            Health app.
+          </p>
+        </section>
+
+        <section>
+          <h2>How We Use Data and Our Legal Bases</h2>
+          <p>We process personal data only as needed to:</p>
+          <ul>
+            <li>create and secure your account and provide transcription, estimation, editing, and syncing features;</li>
+            <li>authenticate requests, maintain sessions, and respond to support requests;</li>
+            <li>protect the service, prevent abuse, diagnose failures, and manage capacity and costs; and</li>
+            <li>comply with legal obligations and enforce our terms.</li>
+          </ul>
+          <p>
+            Where EU or EEA law applies, we rely on performance of our contract with you to
+            provide the service, our legitimate interests in operating and securing it, your
+            consent for optional Apple Health access, and legal obligations where applicable. You
+            may withdraw Health permission at any time without affecting earlier processing.
+          </p>
+        </section>
+
+        <section>
+          <h2>Service Providers and International Processing</h2>
+          <p>We use the following providers to operate Ate That:</p>
+          <ul>
+            <li><strong>Apple</strong> for Sign in with Apple, HealthKit, App Store distribution, and diagnostics you choose to share;</li>
+            <li><strong>Google Cloud</strong> for backend compute, database hosting, backups, networking, and operational logging; and</li>
+            <li><strong>OpenAI</strong> for audio transcription and meal estimation or editing.</li>
+          </ul>
+          <p>
+            These providers may process data outside Cyprus or the EEA. Where required, we rely
+            on contractual and other lawful safeguards for international transfers. Provider
+            processing is also governed by their terms and privacy notices, including the
+            <a href="https://cloud.google.com/terms/cloud-privacy-notice">Google Cloud Privacy Notice</a>
+            and OpenAI's API data controls linked above.
+          </p>
+          <p>
+            We do not sell personal data, share it for cross-context behavioural advertising, or
+            disclose it to advertisers.
+          </p>
+        </section>
+
+        <section>
+          <h2>Retention</h2>
+          <p>
+            Local meals and review memos remain on your device until you delete them, delete all
+            local data, or remove the app. Account and usage metadata is generally retained while
+            your account is active. Active app sessions expire after 30 days and may be replaced
+            or revoked sooner.
+          </p>
+          <p>
+            Submitted meal content is not retained by us after the inference request ends.
+            Infrastructure logs and OpenAI's processing may have separate limited retention as
+            described in this policy and the linked provider notices.
+          </p>
+          <p>
+            When you delete your account, its account, session, and usage records are deleted from
+            the active database. Residual copies may remain in protected rotating database
+            backups until they are overwritten; we currently retain seven backup copies. We may
+            retain information longer where required by law or necessary to establish, exercise,
+            or defend legal claims.
+          </p>
+        </section>
+
+        <section>
+          <h2>Security</h2>
+          <p>
+            We use technical and organisational safeguards appropriate to the data we process.
+            These include encrypted network connections, encrypted Apple credentials, hashed app
+            refresh tokens, restricted production access, and managed cloud security controls.
+            No method of storage or transmission can be guaranteed completely secure.
           </p>
         </section>
 
         <section>
           <h2>Analytics and Tracking</h2>
           <p>
-            Ate That does not use third-party analytics, advertising SDKs, or cross-app tracking.
-            Thalassa Softwaraki LTD does not sell your data.
-          </p>
-          <p>
-            Apple may provide standard TestFlight, App Store, and crash diagnostic information
+            Ate That does not include third-party advertising or behavioural analytics SDKs and
+            does not track you across other companies' apps or websites. Apple may provide
+            standard App Store, TestFlight, performance, and crash diagnostic information
             according to your Apple settings.
           </p>
         </section>
 
         <section>
-          <h2>Data Deletion</h2>
+          <h2>Your Choices and Rights</h2>
           <p>
-            You can delete individual meals in Ate That. The app also provides a local data
-            deletion control for removing meals stored by Ate That on your device.
+            Depending on applicable law, you may have rights to access, correct, delete, restrict,
+            or object to processing of your personal data, receive a portable copy, and withdraw
+            consent. To make a request, email
+            <a href="mailto:ops@thalassa.dev">ops@thalassa.dev</a>. We may need to verify your
+            identity before completing a request.
           </p>
           <p>
-            If Apple Health export is enabled, deleting meals also attempts to remove Apple
-            Health calorie samples created by Ate That.
+            You also have the right to lodge a complaint with a data protection authority. In
+            Cyprus, this is the
+            <a href="https://www.dataprotection.gov.cy/dataprotection/dataprotection.nsf/contact_en/contact_en">Office of the Commissioner for Personal Data Protection</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2>Deleting Your Data</h2>
+          <p>
+            You can delete individual meals or all local meal data from Ate That. If Apple Health
+            export is enabled, Ate That also attempts to remove the Health samples it created.
+          </p>
+          <p>
+            You can delete your Ate That account from Settings. Account deletion removes your
+            server-side account, sessions, and usage metadata as described under Retention, but it
+            does not automatically erase meal history stored locally on your device. Use the
+            separate local data deletion control if you want to remove that history as well.
+          </p>
+        </section>
+
+        <section>
+          <h2>Changes to This Policy</h2>
+          <p>
+            We may update this policy as Ate That changes. We will post the revised policy here,
+            update its effective date, and provide additional notice in the app when a change is
+            material.
           </p>
         </section>
 
         <section>
           <h2>Contact</h2>
           <p>
-            If you have privacy questions about Ate That, contact Thalassa Softwaraki LTD at
+            For privacy questions or requests, contact
             <a href="mailto:ops@thalassa.dev">ops@thalassa.dev</a>.
           </p>
           <p>
-            Thalassa Softwaraki LTD is registered in Cyprus as HE 466541 (VAT 60106502M) and
-            based in Limassol, Cyprus.
+            Thalassa Softwaraki LTD<br />
+            Limassol, Cyprus<br />
+            Registration HE 466541 · VAT 60106502M
           </p>
         </section>
       </div>
