@@ -65,8 +65,9 @@
           </p>
           <p>
             Audio memos for pending or failed entries may also remain on your device so that you
-            can replay, retry, replace, or delete them. We do not keep a server-side copy of your
-            meal history or these saved memos.
+            can replay, retry, replace, or delete them. Your local meal history and saved audio
+            memos are not synchronised to a server. We do retain the completion records described
+            below, but we do not retain your recordings.
           </p>
         </section>
 
@@ -96,11 +97,18 @@
             estimate or edit calories, macronutrients, alcohol, and meal items.
           </p>
           <p>
-            We do not write your submitted audio, transcript, meal context, or inference
-            result to its database, object storage, or application logs. This content may be held
-            briefly in memory or temporary instance storage while the request is processed, and
-            is discarded when the request finishes. If a request fails, any review memo shown in
-            Ate That is the local copy on your device.
+            We never write submitted audio to our database, object storage, or application logs.
+            Audio may be held briefly in memory or temporary instance storage while the request
+            is processed and is discarded when the request finishes. If a request fails, any
+            review memo shown in Ate That is the local copy on your device.
+          </p>
+          <p>
+            During beta testing, we retain one completion record for each accepted meal creation
+            or edit request. A completion may contain the transcript, locale, original meal
+            context supplied for an edit, and the structured model result. If processing fails,
+            the record contains the available request context and a stable failure code. We do
+            not retain raw error responses from OpenAI. Internal retries remain part of the same
+            completion record.
           </p>
           <p>
             OpenAI processes this content as our service provider. Ate That requests that text
@@ -115,17 +123,17 @@
         <section>
           <h2>Service and Usage Data</h2>
           <p>
-            To operate and protect the service, we keep limited metadata associated with your
-            account. This may include a request ID, operation type, model and prompt version,
-            token counts, response status, processing time, app version, build number, and
-            timestamps. This metadata does not include your recording, transcript, meal names,
-            ingredient list, or inference result.
+            Completion records are associated with your Ate That account. In addition to the
+            content described above, they may include a request ID, request type, model and prompt
+            version, token counts, response status, processing time, and timestamps. The app may
+            also send its version and build number. We use these records to evaluate beta quality,
+            investigate failures, enforce rate limits, prevent misuse, and understand service
+            costs.
           </p>
           <p>
             Our infrastructure providers may also process technical information such as IP
             address, network and device information, and service logs for delivery, security,
-            troubleshooting, and abuse prevention. We use inference usage records to enforce rate
-            limits, investigate failures, prevent misuse, and understand service costs.
+            troubleshooting, and abuse prevention.
           </p>
         </section>
 
@@ -151,7 +159,7 @@
           <ul>
             <li>create and secure your account and provide transcription, estimation, editing, and syncing features;</li>
             <li>authenticate requests, maintain sessions, and respond to support requests;</li>
-            <li>protect the service, prevent abuse, diagnose failures, and manage capacity and costs; and</li>
+            <li>evaluate beta results, diagnose failures, protect the service, prevent abuse, and manage capacity and costs; and</li>
             <li>comply with legal obligations and enforce our terms.</li>
           </ul>
           <p>
@@ -187,18 +195,19 @@
           <h2>Retention</h2>
           <p>
             Local meals and review memos remain on your device until you delete them, delete all
-            local data, or remove the app. Account and usage metadata is generally retained while
-            your account is active. Active app sessions expire after 30 days and may be replaced
-            or revoked sooner.
+            local data, or remove the app. Account data and completion records are generally
+            retained while your account is active. Active app sessions expire after 30 days and
+            may be replaced or revoked sooner.
           </p>
           <p>
-            Submitted meal content is not retained by us after the inference request ends.
-            Infrastructure logs and OpenAI's processing may have separate limited retention as
-            described in this policy and the linked provider notices.
+            Submitted audio is discarded after the inference request ends. Completion content is
+            retained as described above until you delete your account. Infrastructure logs and
+            OpenAI's processing may have separate limited retention as described in this policy
+            and the linked provider notices.
           </p>
           <p>
-            When you delete your account, its account, session, and usage records are deleted from
-            the active database. Residual copies may remain in protected rotating database
+            When you delete your account, its account, session, and completion records are deleted
+            from the active database. Residual copies may remain in protected rotating database
             backups until they are overwritten; we currently retain seven backup copies. We may
             retain information longer where required by law or necessary to establish, exercise,
             or defend legal claims.
