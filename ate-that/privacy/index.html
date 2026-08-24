@@ -103,10 +103,10 @@
             review memo shown in Ate That is the local copy on your device.
           </p>
           <p>
-            During beta testing, we retain one completion record for each accepted meal creation
-            or edit request. A completion may contain the transcript, locale, original meal
-            context supplied for an edit, and the structured model result. If processing fails,
-            the record contains the available request context and a stable failure code. We do
+            For each accepted meal creation or edit request, we retain one completion record. It
+            may contain the transcript, locale, original meal context supplied for an edit, and the
+            structured model result. If processing fails, the record contains the available request
+            context and a stable failure code. We do
             not retain raw error responses from OpenAI. Internal retries remain part of the same
             completion record.
           </p>
@@ -121,12 +121,35 @@
         </section>
 
         <section>
+          <h2>Food Catalogue</h2>
+          <p>
+            To make repeated estimates more consistent, Ate That searches a food catalogue before
+            creating new nutrition values. The service may store private food aliases and nutrition
+            overrides associated with your account. These let phrases you use regularly resolve to
+            the same food profile and let your corrections take precedence for your account.
+          </p>
+          <p>
+            When no compatible food exists, OpenAI may create a clean canonical food identity,
+            preparation category, and nutrition profile. Ate That may add that profile to its shared
+            catalogue so it can be proposed for future estimates. Shared profiles do not contain
+            your account ID, recording, meal timestamp, or complete meal history. Your raw or
+            personal phrasing is kept as a private alias and is not published as a shared name.
+          </p>
+          <p>
+            Similar catalogue entries are only proposals: OpenAI considers the current description,
+            brand, preparation, and other relevant details before choosing an existing food ID or
+            creating a different profile. Selecting an existing food reuses its stored nutrition
+            values unchanged.
+          </p>
+        </section>
+
+        <section>
           <h2>Service and Usage Data</h2>
           <p>
             Completion records are associated with your Ate That account. In addition to the
             content described above, they may include a request ID, request type, model and prompt
             version, token counts, response status, processing time, and timestamps. The app may
-            also send its version and build number. We use these records to evaluate beta quality,
+            also send its version and build number. We use these records to evaluate service quality,
             investigate failures, enforce rate limits, prevent misuse, and understand service
             costs.
           </p>
@@ -159,7 +182,7 @@
           <ul>
             <li>create and secure your account and provide transcription, estimation, editing, and syncing features;</li>
             <li>authenticate requests, maintain sessions, and respond to support requests;</li>
-            <li>evaluate beta results, diagnose failures, protect the service, prevent abuse, and manage capacity and costs; and</li>
+            <li>evaluate results, diagnose failures, protect the service, prevent abuse, and manage capacity and costs; and</li>
             <li>comply with legal obligations and enforce our terms.</li>
           </ul>
           <p>
@@ -195,9 +218,9 @@
           <h2>Retention</h2>
           <p>
             Local meals and review memos remain on your device until you delete them, delete all
-            local data, or remove the app. Account data and completion records are generally
-            retained while your account is active. Active app sessions expire after 30 days and
-            may be replaced or revoked sooner.
+            local data, or remove the app. Account data, completion records, private food aliases,
+            and personal food overrides are generally retained while your account is active. Active
+            app sessions expire after 30 days and may be replaced or revoked sooner.
           </p>
           <p>
             Submitted audio is discarded after the inference request ends. Completion content is
@@ -206,11 +229,12 @@
             and the linked provider notices.
           </p>
           <p>
-            When you delete your account, its account, session, and completion records are deleted
-            from the active database. Residual copies may remain in protected rotating database
-            backups until they are overwritten; we currently retain seven backup copies. We may
-            retain information longer where required by law or necessary to establish, exercise,
-            or defend legal claims.
+            When you delete your account, its account, session, completion, private-alias, and
+            personal-override records are deleted from the active database. Shared canonical food
+            profiles are not linked to an account and may remain in the catalogue. Residual copies
+            may remain in protected rotating database backups until they are overwritten; we
+            currently retain seven backup copies. We may retain information longer where required
+            by law or necessary to establish, exercise, or defend legal claims.
           </p>
         </section>
 

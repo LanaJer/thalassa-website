@@ -16,7 +16,7 @@
     <meta property="og:title" content="Ate That — Push to Eat" />
     <meta
       property="og:description"
-      content="Log meals by voice from the iPhone Action Button. Approximate calories and macros, local-first, no account."
+      content="Log meals by voice from the iPhone Action Button. Get approximate calories and macros while keeping your meal diary on your iPhone."
     />
     <meta property="og:url" content="https://thalassa.dev/ate-that/" />
     <meta property="og:image" content="https://thalassa.dev/ate-that/assets/app-icon-220.png" />
@@ -110,10 +110,10 @@
 
       <section class="fact-strip" aria-label="Ate That at a glance">
         <div class="container fact-strip-grid">
-          <div><strong>No account</strong><span>Local meal history</span></div>
-          <div><strong>No Thalassa server</strong><span>Direct OpenAI processing</span></div>
+          <div><strong>Sign in with Apple</strong><span>Private account access</span></div>
+          <div><strong>Local meal diary</strong><span>Stored on your iPhone</span></div>
           <div><strong>Approximate by design</strong><span>Useful, not fake-precise</span></div>
-          <div><strong>Optional Health export</strong><span>Dietary energy only</span></div>
+          <div><strong>Optional Health export</strong><span>Calories and nutrients</span></div>
         </div>
       </section>
 
@@ -123,8 +123,8 @@
           <h2>Hold, dictate, hold again.</h2>
           <p class="lead">
             Built for the flow you actually want: log food the moment you think about it, even
-            when your phone is locked. Control Center works as a backup, and the app can log
-            meals too.
+            while using another app. Control Center works as a backup, and the app can log meals
+            too.
           </p>
         </div>
 
@@ -222,15 +222,17 @@
         <div class="container privacy-grid">
           <div class="reveal">
             <p class="eyebrow">Privacy</p>
-            <h2>Local-first, with direct OpenAI processing.</h2>
+            <h2>Local meal history, protected processing.</h2>
             <p>
-              Ate That doesn’t use its own server or account system. Your meal history stays on
-              your device. When you log a meal, the app sends the necessary audio, transcript, or
-              meal text directly to OpenAI — only to transcribe and estimate the meal.
+              Your meal history stays on your iPhone. Sign in with Apple secures access to Ate
+              That's service. When you submit a meal, the service sends the recording and relevant
+              meal context to OpenAI for transcription and estimation. Ate That does not retain
+              submitted recordings.
             </p>
             <p>
-              Apple Health export is optional. If enabled, Ate That writes estimated dietary
-              energy to Apple Health and does not read your Health data.
+              Account-linked transcripts, structured results, request details, and private food
+              preferences are retained until you delete your account. Apple Health export remains
+              optional and is not sent to Ate That's servers or OpenAI.
             </p>
             <a class="button" href="/ate-that/privacy/">Read the privacy policy</a>
           </div>
@@ -249,7 +251,7 @@
       <section class="section container">
         <div class="ate-cta reveal">
           <p class="eyebrow">Support</p>
-          <h2>Questions, bugs, or TestFlight feedback?</h2>
+          <h2>Questions, bugs, or feedback?</h2>
           <p>
             Send feedback to Thalassa Softwaraki LTD. Include your iPhone model, iOS version, and
             what you were trying to log if the issue is about recognition or estimates.
