@@ -37,8 +37,10 @@
         <p class="eyebrow">Ate That</p>
         <h1>Privacy Policy</h1>
         <p class="lead">
-          Ate That keeps your meal history on your device. Voice recordings and meal details are
-          processed only when needed to provide transcription and nutrition estimates.
+          Ate That keeps your meal history and any audio recordings awaiting review on your
+          device. Submitted audio recordings are removed immediately after processing the meal
+          data. The text descriptions and nutrition results described below are stored with your
+          account.
         </p>
         <p class="doc-updated">Effective: August 24, 2026</p>
       </div>
@@ -61,13 +63,13 @@
           <p>
             Your meal history is stored locally on your device using Apple's storage frameworks.
             It may include meal titles, estimated calories and nutrients, item breakdowns,
-            timestamps, transcripts, prompt versions, and Apple Health export status.
+            timestamps, text descriptions, prompt versions, and Apple Health export status.
           </p>
           <p>
-            Audio memos for pending or failed entries may also remain on your device so that you
-            can replay, retry, replace, or delete them. Your local meal history and saved audio
-            memos are not synchronised to a server. We do retain the completion records described
-            below, but we do not retain your recordings.
+            Audio recordings for entries awaiting review may also remain on your device so that
+            you can replay, retry, replace, or delete them. Your local meal history and these audio
+            recordings are not synchronised to a server. We do retain the processing records
+            described below, but we do not retain submitted audio recordings.
           </p>
         </section>
 
@@ -92,23 +94,24 @@
           <h2>Voice and Meal Processing</h2>
           <p>
             When you submit a voice entry, the app sends the recording over an encrypted
-            connection to our backend. The backend sends the audio to OpenAI for
-            transcription, then sends the transcript and relevant meal context to OpenAI to
-            estimate or edit calories, macronutrients, alcohol, and meal items.
+            connection to our backend. The backend sends the audio to OpenAI to convert it into
+            text, then sends that text and relevant meal context to OpenAI to estimate or edit
+            calories, macronutrients, alcohol, and meal items.
           </p>
           <p>
             We never write submitted audio to our database, object storage, or application logs.
             Audio may be held briefly in memory or temporary instance storage while the request
-            is processed and is discarded when the request finishes. If a request fails, any
-            review memo shown in Ate That is the local copy on your device.
+            is processed and is removed immediately after the meal data has been processed. If a
+            request fails, any audio recording awaiting review in Ate That is the local copy on
+            your device.
           </p>
           <p>
-            For each accepted meal creation or edit request, we retain one completion record. It
-            may contain the transcript, locale, original meal context supplied for an edit, and the
-            structured model result. If processing fails, the record contains the available request
-            context and a stable failure code. We do
-            not retain raw error responses from OpenAI. Internal retries remain part of the same
-            completion record.
+            For each submitted meal creation or edit request, we retain one processing record. It
+            may contain the text description produced from the audio, locale, original meal
+            context supplied for an edit, and the structured nutrition result. If processing
+            fails, the record contains the available request context and a stable failure code. We
+            do not retain raw error responses from OpenAI. Internal retries remain part of the
+            same processing record.
           </p>
           <p>
             OpenAI processes this content as our service provider. Ate That requests that text
@@ -123,30 +126,22 @@
         <section>
           <h2>Food Catalogue</h2>
           <p>
-            To make repeated estimates more consistent, Ate That searches a food catalogue before
-            creating new nutrition values. The service may store private food aliases and nutrition
-            overrides associated with your account. These let phrases you use regularly resolve to
-            the same food profile and let your corrections take precedence for your account.
+            To make nutrition estimates more consistent, Ate That maintains a shared food
+            catalogue containing food descriptions and nutrition values. Shared catalogue entries
+            do not contain your account ID, audio recordings, meal timestamps, or meal history.
           </p>
           <p>
-            When no compatible food exists, OpenAI may create a clean canonical food identity,
-            preparation category, and nutrition profile. Ate That may add that profile to its shared
-            catalogue so it can be proposed for future estimates. Shared profiles do not contain
-            your account ID, recording, meal timestamp, or complete meal history. Your raw or
-            personal phrasing is kept as a private alias and is not published as a shared name.
-          </p>
-          <p>
-            Similar catalogue entries are only proposals: OpenAI considers the current description,
-            brand, preparation, and other relevant details before choosing an existing food ID or
-            creating a different profile. Selecting an existing food reuses its stored nutrition
-            values unchanged.
+            If you suggest a nutrition correction, Ate That may combine it with suggestions from
+            other users to improve the shared catalogue and future estimates. Your suggestion may
+            remain in the account-linked processing record described in this policy, but the
+            shared catalogue does not identify who suggested a correction.
           </p>
         </section>
 
         <section>
           <h2>Service and Usage Data</h2>
           <p>
-            Completion records are associated with your Ate That account. In addition to the
+            Processing records are associated with your Ate That account. In addition to the
             content described above, they may include a request ID, request type, model and prompt
             version, token counts, response status, processing time, and timestamps. The app may
             also send its version and build number. We use these records to evaluate service quality,
@@ -180,7 +175,7 @@
           <h2>How We Use Data and Our Legal Bases</h2>
           <p>We process personal data only as needed to:</p>
           <ul>
-            <li>create and secure your account and provide transcription, estimation, editing, and syncing features;</li>
+            <li>create and secure your account and provide audio-to-text conversion, estimation, editing, and syncing features;</li>
             <li>authenticate requests, maintain sessions, and respond to support requests;</li>
             <li>evaluate results, diagnose failures, protect the service, prevent abuse, and manage capacity and costs; and</li>
             <li>comply with legal obligations and enforce our terms.</li>
@@ -199,7 +194,7 @@
           <ul>
             <li><strong>Apple</strong> for Sign in with Apple, HealthKit, App Store distribution, and diagnostics you choose to share;</li>
             <li><strong>Google Cloud</strong> for backend compute, database hosting, backups, networking, and operational logging; and</li>
-            <li><strong>OpenAI</strong> for audio transcription and meal estimation or editing.</li>
+            <li><strong>OpenAI</strong> for audio-to-text conversion and meal estimation or editing.</li>
           </ul>
           <p>
             These providers may process data outside Cyprus or the EEA. Where required, we rely
@@ -217,24 +212,27 @@
         <section>
           <h2>Retention</h2>
           <p>
-            Local meals and review memos remain on your device until you delete them, delete all
-            local data, or remove the app. Account data, completion records, private food aliases,
-            and personal food overrides are generally retained while your account is active. Active
-            app sessions expire after 30 days and may be replaced or revoked sooner.
+            Local meals and audio recordings awaiting review remain on your device until you delete
+            them, delete all local data, or remove the app. Account data, processing records, and
+            account-linked nutrition correction suggestions are generally retained while your
+            account is active. Active app sessions expire after 30 days and may be replaced or
+            revoked sooner.
           </p>
           <p>
-            Submitted audio is discarded after the inference request ends. Completion content is
+            Submitted audio is removed immediately after the meal data has been processed.
+            Processing-record content is
             retained as described above until you delete your account. Infrastructure logs and
             OpenAI's processing may have separate limited retention as described in this policy
             and the linked provider notices.
           </p>
           <p>
-            When you delete your account, its account, session, completion, private-alias, and
-            personal-override records are deleted from the active database. Shared canonical food
-            profiles are not linked to an account and may remain in the catalogue. Residual copies
-            may remain in protected rotating database backups until they are overwritten; we
-            currently retain seven backup copies. We may retain information longer where required
-            by law or necessary to establish, exercise, or defend legal claims.
+            When you delete your account, its account, session, processing, and account-linked
+            correction records are deleted from the active database. Shared food profiles and
+            combined nutrition values that do not identify who suggested a correction may remain
+            in the catalogue. Residual copies may remain in protected rotating database backups
+            until they are overwritten; we currently retain seven backup copies. We may retain
+            information longer where required by law or necessary to establish, exercise, or
+            defend legal claims.
           </p>
         </section>
 
@@ -282,9 +280,10 @@
           </p>
           <p>
             You can delete your Ate That account from Settings. Account deletion removes your
-            server-side account, sessions, and usage metadata as described under Retention, but it
-            does not automatically erase meal history stored locally on your device. Use the
-            separate local data deletion control if you want to remove that history as well.
+            server-side account, sessions, processing records, and account-linked correction
+            suggestions as described under Retention, but it does not automatically erase meal
+            history stored locally on your device. Use the separate local data deletion control if
+            you want to remove that history as well.
           </p>
         </section>
 
