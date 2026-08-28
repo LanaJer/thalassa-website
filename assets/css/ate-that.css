@@ -53,6 +53,75 @@ body.ate .nav-links {
   background: transparent;
 }
 
+body.ate .language-selector {
+  position: relative;
+}
+
+body.ate .language-selector summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-width: 54px;
+  min-height: 38px;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 0.82rem;
+  font-weight: 650;
+  cursor: pointer;
+  list-style: none;
+}
+
+body.ate .language-selector summary::-webkit-details-marker {
+  display: none;
+}
+
+body.ate .language-selector summary::after {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  content: "";
+  transform: translateY(-0.12rem) rotate(45deg);
+}
+
+body.ate .language-selector[open] summary::after {
+  transform: translateY(0.12rem) rotate(225deg);
+}
+
+body.ate .language-menu {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 60;
+  display: grid;
+  min-width: 220px;
+  padding: 0.45rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+body.ate .language-menu a {
+  padding: 0.55rem 0.65rem;
+  border-radius: 7px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 550;
+  text-decoration: none;
+}
+
+body.ate .language-menu a:hover,
+body.ate .language-menu a:focus-visible,
+body.ate .language-menu a[aria-current="page"] {
+  color: var(--ink);
+  background: var(--surface-strong);
+}
+
 body.ate .button {
   background: var(--accent-grad);
   color: #ffffff;
@@ -471,6 +540,10 @@ body.ate .field textarea {
 }
 
 @media (max-width: 520px) {
+  body.ate .privacy-nav .nav-cta {
+    display: none;
+  }
+
   .fact-strip-grid {
     grid-template-columns: 1fr;
   }

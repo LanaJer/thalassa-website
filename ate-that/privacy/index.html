@@ -9,6 +9,17 @@
       content="Privacy policy for Ate That, a voice-first calorie and nutrient tracking app by Thalassa Softwaraki LTD."
     />
     <link rel="canonical" href="https://thalassa.dev/ate-that/privacy/" />
+    <link rel="alternate" hreflang="x-default" href="https://thalassa.dev/ate-that/privacy/" />
+    <link rel="alternate" hreflang="en" href="https://thalassa.dev/ate-that/privacy/" />
+    <link rel="alternate" hreflang="de" href="https://thalassa.dev/ate-that/privacy/de/" />
+    <link rel="alternate" hreflang="el" href="https://thalassa.dev/ate-that/privacy/el/" />
+    <link rel="alternate" hreflang="es" href="https://thalassa.dev/ate-that/privacy/es/" />
+    <link rel="alternate" hreflang="fr" href="https://thalassa.dev/ate-that/privacy/fr/" />
+    <link rel="alternate" hreflang="it" href="https://thalassa.dev/ate-that/privacy/it/" />
+    <link rel="alternate" hreflang="pl" href="https://thalassa.dev/ate-that/privacy/pl/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://thalassa.dev/ate-that/privacy/pt-br/" />
+    <link rel="alternate" hreflang="pt-PT" href="https://thalassa.dev/ate-that/privacy/pt-pt/" />
+    <link rel="alternate" hreflang="ru" href="https://thalassa.dev/ate-that/privacy/ru/" />
     <link rel="icon" type="image/png" href="/ate-that/assets/app-icon-220.png" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Ate That Privacy Policy" />
@@ -23,11 +34,26 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-      <nav class="nav container" aria-label="Main navigation">
+      <nav class="nav container privacy-nav" aria-label="Main navigation">
         <a class="brand" href="/ate-that/">
           <img src="/ate-that/assets/app-icon-220.png" alt="" width="30" height="30" style="border-radius: 8px;" />
           Ate That
         </a>
+        <details class="language-selector">
+          <summary aria-label="Choose language: English">EN</summary>
+          <div class="language-menu">
+            <a href="/ate-that/privacy/" lang="en" aria-current="page">English</a>
+            <a href="/ate-that/privacy/de/" lang="de">Deutsch</a>
+            <a href="/ate-that/privacy/el/" lang="el">Ελληνικά</a>
+            <a href="/ate-that/privacy/es/" lang="es">Español</a>
+            <a href="/ate-that/privacy/fr/" lang="fr">Français</a>
+            <a href="/ate-that/privacy/it/" lang="it">Italiano</a>
+            <a href="/ate-that/privacy/pl/" lang="pl">Polski</a>
+            <a href="/ate-that/privacy/pt-br/" lang="pt-BR">Português (Brasil)</a>
+            <a href="/ate-that/privacy/pt-pt/" lang="pt-PT">Português (Portugal)</a>
+            <a href="/ate-that/privacy/ru/" lang="ru">Русский</a>
+          </div>
+        </details>
         <a class="button button-small button-outline nav-cta" href="/ate-that/support/">Support</a>
       </nav>
     </header>
@@ -37,12 +63,12 @@
         <p class="eyebrow">Ate That</p>
         <h1>Privacy Policy</h1>
         <p class="lead">
-          Ate That keeps your meal history and any audio recordings awaiting review on your
-          device. Submitted audio recordings are removed immediately after processing the meal
-          data. The text descriptions and nutrition results described below are stored with your
-          account.
+          Ate That stores the account, subscription, meal, and nutrition information needed to
+          provide and synchronise the service. Submitted audio recordings are not retained. Audio
+          recordings awaiting your review remain only on your device, and data from Apple Health
+          is not sent to our servers or OpenAI.
         </p>
-        <p class="doc-updated">Effective: August 24, 2026</p>
+        <p class="doc-updated">Effective: August 28, 2026</p>
       </div>
 
       <div class="container doc-body">
@@ -59,22 +85,24 @@
         </section>
 
         <section>
-          <h2>Meal History on Your Device</h2>
+          <h2>What We Store</h2>
+          <p>Ate That stores the following categories of information:</p>
+          <ul>
+            <li>your account identifier and any email address shared through Sign in with Apple;</li>
+            <li>your subscription status and App Store transaction information;</li>
+            <li>your synchronised meal history, text descriptions, and nutrition results;</li>
+            <li>food corrections and nutrition values you choose for foods; and</li>
+            <li>service information needed for security, reliability, support, and abuse prevention.</li>
+          </ul>
           <p>
-            Your meal history is stored locally on your device using Apple's storage frameworks.
-            It may include meal titles, estimated calories and nutrients, item breakdowns,
-            timestamps, text descriptions, prompt versions, and Apple Health export status.
-          </p>
-          <p>
-            Audio recordings for entries awaiting review may also remain on your device so that
-            you can replay, retry, replace, or delete them. Your local meal history and these audio
-            recordings are not synchronised to a server. We do retain the processing records
-            described below, but we do not retain submitted audio recordings.
+            Submitted audio recordings are not stored by Ate That. Audio recordings awaiting
+            review may remain locally on your device until you retry or delete them, or remove the
+            app.
           </p>
         </section>
 
         <section>
-          <h2>Your Account</h2>
+          <h2>Your Account and Subscription</h2>
           <p>
             An Ate That account is created when you use Sign in with Apple. Apple gives us a
             developer-specific identifier and, if you choose to share it, your email address. The
@@ -83,42 +111,57 @@
           </p>
           <p>
             We store an internal account ID, the Apple identifier, the email information Apple
-            provides, encrypted Apple authorization credentials, and sign-in session records. The
-            app stores its refresh token in the iOS Keychain. See
+            provides, encrypted credentials needed to maintain your connection to Apple, and
+            sign-in session information. The app stores its sign-in credential in the iOS
+            Keychain. See
             <a href="https://www.apple.com/legal/privacy/data/en/sign-in-with-apple/">Sign in with Apple &amp; Privacy</a>
             for information about Apple's processing.
+          </p>
+          <p>
+            If you subscribe, we store your subscription product, status, purchase and expiration
+            dates, renewal status, trial or offer information, and App Store transaction
+            identifiers. Apple processes your payment. Ate That does not receive or store your
+            payment-card details.
           </p>
         </section>
 
         <section>
-          <h2>Voice and Meal Processing</h2>
+          <h2>Meal History and Synchronisation</h2>
           <p>
-            When you submit a voice entry, the app sends the recording over an encrypted
-            connection to our backend. The backend sends the audio to OpenAI to convert it into
-            text, then sends that text and relevant meal context to OpenAI to estimate or edit
-            calories, macronutrients, alcohol, and meal items.
+            Your meal history is stored with your Ate That account and synchronised to the app.
+            A local copy is cached on your device. Meal history may include meal titles, food
+            items, quantities, preparation and food variants, estimated calories and nutrients,
+            timestamps, text descriptions, edits, and deletion status.
           </p>
           <p>
-            We never write submitted audio to our database, object storage, or application logs.
-            Audio may be held briefly in memory or temporary instance storage while the request
-            is processed and is removed immediately after the meal data has been processed. If a
-            request fails, any audio recording awaiting review in Ate That is the local copy on
-            your device.
+            When you delete a meal, it is removed from your active meal history. Ate That may keep
+            a minimal deletion record so that the deletion can be synchronised across your
+            devices. This record is removed when you delete your account.
+          </p>
+        </section>
+
+        <section>
+          <h2>Voice Entries and Nutrition Results</h2>
+          <p>
+            When you submit a voice entry, the audio is sent securely through Ate That to OpenAI
+            to create a text description. The submitted audio is used only to fulfil that request
+            and is not retained by Ate That. If an entry needs your review, the app may keep its
+            local audio recording on your device so that you can replay, retry, replace, or delete
+            it.
           </p>
           <p>
-            For each submitted meal creation or edit request, we retain one processing record. It
-            may contain the text description produced from the audio, locale, original meal
-            context supplied for an edit, and the structured nutrition result. If processing
-            fails, the record contains the available request context and a stable failure code. We
-            do not retain raw error responses from OpenAI. Internal retries remain part of the
-            same processing record.
+            Ate That stores the resulting text description and nutrition result with your
+            account. For meal creation and editing, we also retain the submitted text or edit
+            context, generated nutrition information, and available error information. We use
+            this information to provide meal history, investigate incorrect or failed results,
+            improve reliability, and respond to support requests.
           </p>
           <p>
-            OpenAI processes this content as our service provider. Ate That requests that text
-            responses are not stored as application state. OpenAI states that API data is not
-            used to train its models by default unless the customer opts in, but content may be
-            retained in abuse-monitoring logs for up to 30 days unless a different data-control
-            arrangement applies. Learn more in
+            OpenAI processes submitted audio and text as our service provider. OpenAI states that
+            API data is not used to train its models by default unless the customer opts in. Under
+            OpenAI's standard API controls, audio transcription requests are not retained, while
+            text request content may be kept in abuse-monitoring logs for up to 30 days. Learn
+            more in
             <a href="https://platform.openai.com/docs/models/default-usage-policies-by-endpoint">OpenAI's API data controls</a>.
           </p>
         </section>
@@ -127,26 +170,27 @@
           <h2>Food Catalogue</h2>
           <p>
             To make nutrition estimates more consistent, Ate That maintains a shared food
-            catalogue containing food descriptions and nutrition values. Shared catalogue entries
-            do not contain your account ID, audio recordings, meal timestamps, or meal history.
+            catalogue containing food names, brands, preparation and food variants, and nutrition
+            values. Shared catalogue entries do not contain your account ID, audio recordings,
+            meal timestamps, or meal history.
           </p>
           <p>
             If you suggest a nutrition correction, Ate That may combine it with suggestions from
-            other users to improve the shared catalogue and future estimates. Your suggestion may
-            remain in the account-linked processing record described in this policy, but the
-            shared catalogue does not identify who suggested a correction.
+            other users to improve future estimates. Your correction and any nutrition value you
+            choose for a food are stored with your account until you delete it. Information added
+            to the shared catalogue does not identify who suggested a correction and may remain
+            after account deletion.
           </p>
         </section>
 
         <section>
-          <h2>Service and Usage Data</h2>
+          <h2>Technical Service Data</h2>
           <p>
-            Processing records are associated with your Ate That account. In addition to the
-            content described above, they may include a request ID, request type, model and prompt
-            version, token counts, response status, processing time, and timestamps. The app may
-            also send its version and build number. We use these records to evaluate service quality,
-            investigate failures, enforce rate limits, prevent misuse, and understand service
-            costs.
+            Ate That stores limited technical information about requests made by your account,
+            such as request identifiers, timestamps, app version and build number, response
+            status, error information, processing duration, and service usage. We use this
+            information to secure the service, investigate failures, provide support, enforce
+            usage limits, prevent misuse, and manage service capacity and costs.
           </p>
           <p>
             Our infrastructure providers may also process technical information such as IP
@@ -160,9 +204,9 @@
           <p>
             Apple Health export is optional and requires your permission. If enabled, Ate That
             writes its estimates for dietary energy, protein, fat, carbohydrates, and alcohol to
-            Apple Health. Ate That does not import your general Apple Health history into the app.
-            It may access samples created by Ate That in order to reconcile, replace, or delete
-            them when you sync, edit, or delete a meal.
+            Apple Health. Ate That does not request access to read your other Apple Health data.
+            It asks Apple Health to update or delete samples created by Ate That when you sync,
+            edit, or delete a meal.
           </p>
           <p>
             Health data is handled through Apple's HealthKit framework and is not sent to
@@ -175,7 +219,7 @@
           <h2>How We Use Data and Our Legal Bases</h2>
           <p>We process personal data only as needed to:</p>
           <ul>
-            <li>create and secure your account and provide audio-to-text conversion, estimation, editing, and syncing features;</li>
+            <li>create and secure your account, manage your subscription, and provide meal logging, estimation, editing, and synchronisation;</li>
             <li>authenticate requests, maintain sessions, and respond to support requests;</li>
             <li>evaluate results, diagnose failures, protect the service, prevent abuse, and manage capacity and costs; and</li>
             <li>comply with legal obligations and enforce our terms.</li>
@@ -192,7 +236,7 @@
           <h2>Service Providers and International Processing</h2>
           <p>We use the following providers to operate Ate That:</p>
           <ul>
-            <li><strong>Apple</strong> for Sign in with Apple, HealthKit, App Store distribution, and diagnostics you choose to share;</li>
+            <li><strong>Apple</strong> for Sign in with Apple, subscriptions and payment processing, HealthKit, App Store distribution, and diagnostics you choose to share;</li>
             <li><strong>Google Cloud</strong> for backend compute, database hosting, backups, networking, and operational logging; and</li>
             <li><strong>OpenAI</strong> for audio-to-text conversion and meal estimation or editing.</li>
           </ul>
@@ -212,27 +256,32 @@
         <section>
           <h2>Retention</h2>
           <p>
-            Local meals and audio recordings awaiting review remain on your device until you delete
-            them, delete all local data, or remove the app. Account data, processing records, and
-            account-linked nutrition correction suggestions are generally retained while your
-            account is active. Active app sessions expire after 30 days and may be replaced or
-            revoked sooner.
+            Your account information, synchronised meal history, text descriptions, nutrition
+            results, corrections, and nutrition values you choose for foods are generally retained
+            while your account is active. Individual meals are retained until you delete them.
+            Minimal meal deletion records may remain until you delete your account so that
+            deletions can be synchronised. Active app sessions expire after 30 days and may be
+            replaced or revoked sooner.
           </p>
           <p>
-            Submitted audio is removed immediately after the meal data has been processed.
-            Processing-record content is
-            retained as described above until you delete your account. Infrastructure logs and
-            OpenAI's processing may have separate limited retention as described in this policy
-            and the linked provider notices.
+            Submitted audio recordings are not retained by Ate That. Audio recordings awaiting
+            review remain on your device until you retry or delete them, or remove the app.
+            Technical service information and OpenAI's processing may have separate limited
+            retention as described in this policy and the linked provider notices.
           </p>
           <p>
-            When you delete your account, its account, session, processing, and account-linked
-            correction records are deleted from the active database. Shared food profiles and
-            combined nutrition values that do not identify who suggested a correction may remain
-            in the catalogue. Residual copies may remain in protected rotating database backups
-            until they are overwritten; we currently retain seven backup copies. We may retain
-            information longer where required by law or necessary to establish, exercise, or
-            defend legal claims.
+            Subscription and App Store transaction information is retained while needed to provide
+            subscription access, prevent fraud, resolve payment or entitlement issues, and meet
+            legal, tax, or accounting obligations.
+          </p>
+          <p>
+            When you delete your account, your account, sessions, synchronised meal history, text
+            descriptions, nutrition results, and account-linked corrections are deleted from the
+            active database. Shared food information that does not identify you may remain.
+            Residual copies may remain in protected rotating database backups until they are
+            overwritten; we currently retain seven backup copies. We may retain information
+            longer where required by law or necessary to establish, exercise, or defend legal
+            claims.
           </p>
         </section>
 
@@ -275,15 +324,15 @@
         <section>
           <h2>Deleting Your Data</h2>
           <p>
-            You can delete individual meals or all local meal data from Ate That. If Apple Health
-            export is enabled, Ate That also attempts to remove the Health samples it created.
+            You can delete individual meals from Ate That. The meal is removed from your
+            synchronised history and local cache. If Apple Health export is enabled, Ate That also
+            attempts to remove the Health samples it created for that meal.
           </p>
           <p>
             You can delete your Ate That account from Settings. Account deletion removes your
-            server-side account, sessions, processing records, and account-linked correction
-            suggestions as described under Retention, but it does not automatically erase meal
-            history stored locally on your device. Use the separate local data deletion control if
-            you want to remove that history as well.
+            server-side account and account-linked data as described under Retention and signs you
+            out. The app may retain its local cache on that device after account deletion. Removing
+            the app deletes that local cache and any audio recordings awaiting review.
           </p>
         </section>
 
